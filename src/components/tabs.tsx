@@ -3,7 +3,6 @@ import React from "react";
 import CV from "../pages/CV";
 import styled from 'styled-components';
 import styles from '../../styles/Home.module.css'
-import Home from "./home";
 
 const StyledHeader = styled.div`
   display:flex;
@@ -20,10 +19,10 @@ interface TabsProps {
 const Tabs: React.FC<TabsProps> = () => {
   return (
     <>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center ml-4">
         <div className="inline-flex " role="group">
           <a
-            href="/home"
+            href="/"
             aria-current="page"
             className="
               px-6

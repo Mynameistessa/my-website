@@ -29,7 +29,7 @@ const Contents: React.FC = () => {
           <button
             className="
             dropdown-toggle
-            inline-block px-6 py-2.5 dark:bg-white dark:hover:bg-sky-600 bg-sky-900 text-white dark:text-neutral-900 font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-800 active:shadow-lg transition duration-150 ease-in-out
+            px-6 py-2.5 dark:bg-white dark:hover:bg-sky-600 bg-sky-900 text-white dark:text-neutral-900 font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-800 active:shadow-lg transition duration-150 ease-in-out
             flex
             items-center
             whitespace-nowrap
@@ -72,7 +72,6 @@ const Contents: React.FC = () => {
         rounded-lg
         shadow-lg
         mt-1
-        hidden
         m-0
         bg-clip-padding
         border-none

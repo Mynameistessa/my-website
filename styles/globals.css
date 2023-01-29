@@ -89,13 +89,6 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: 'seablue';
-
-  /* // to make sticky footer */
-  /* min-height: 100vh;
-  display: flex;
-  flex-direction: column; */
-
-  /* flex-grow:1; */
 }
 
 a {
