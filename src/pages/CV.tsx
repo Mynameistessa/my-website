@@ -132,7 +132,7 @@ const CV: React.FC = () => {
             </div>
           </div>
         </div>
-        <a href="/images/myw3schoolsimage.jpg" download>
+        <a href="/CV.pdf" download>
           <div className="flex space-x-2 float-right">
             <button
               type="button"
