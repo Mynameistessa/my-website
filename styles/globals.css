@@ -89,6 +89,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: 'seablue';
+  /* cursor: url('https://commons.wikimedia.org/wiki/Main_Page#/media/File:Luk%C3%A1%C5%A1_Dan%C4%9Bk_Seefeld,_February_25,_2019.jpg') 16 16, pointer; */
 }
 
 a {

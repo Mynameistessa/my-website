@@ -10,10 +10,6 @@ import styles from '../../../styles/Home.module.css'
 import Head from 'next/head';
 import { openInNewTab } from '../../utils/newtab';
 
-const StyledHeading = styled.h1`
-  flex-grow: 2;
-`;
-
 type LayoutProps = {
   children: React.ReactNode,
 };
@@ -41,40 +37,62 @@ const Layout = ({ children }: LayoutProps): JSX.Element | null => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/close-clover.png" />
       </Head>
-      <div className={styles.main}>
-        <div className='flex flex-row items-center border-b-4 justify-between dark:border-soft-blue border-pesto pb-2 pt-4 bg-sky-800'>
-          <Tabs />
-          <StyledHeading className={`text-3xl dark:text-dolphin-blue text-white text-center font-bold justify-self-center`}>Tessa Breen</StyledHeading>
-          <div className='flex flex-none space-x-2'>
-            <Image
-              src={theme === 'dark' ? '/youtube-soft-blue.svg' : '/youtube-white.svg'}
+      <div >
+        <div className='flex flex-row pb-4 pt-4 bg-sky-800 dark:bg-white'>
+          {/* <Tabs /> */}
+          {/* <StyledHeading className={`ml-8 text-3xl dark:text-dolphin-blue text-white font-bold`}>Tessa Breen</StyledHeading> */}
+          <h1 className={`ml-8 text-3xl dark:text-almost-black text-white font-bold`}>Tessa Breen</h1>
+          {/* <Image
+            src={'/logo1.png'}
+            alt="logo"
+            width='100'
+            height='100'
+            className="ml-4 absolute"
+          /> */}
+          <div className='flex ml-auto space-x-8 mr-8'>
+            {/* <Image
+              src={'/youtube-ivory.svg'}
               alt="youtube"
-              width='50'
-              height='50'
-              className='cursor-pointer '
+              width='40'
+              height='40'
+              className='cursor-pointer fill-ivory'
               onClick={() => openInNewTab('https://www.youtube.com/channel/UCb3YyYMUP9ViwoAnhZStVkA')}
             />
             <Image
-              src={theme === 'dark' ? '/instagram-soft-blue.svg' : '/instagram-white.svg'}
+              src={'/insta-ivory.svg'}
               alt="instagram"
               width='40'
               height='40'
               className='cursor-pointer'
               onClick={() => openInNewTab('https://www.instagram.com/tessabreen1994/')}
+            /> */}
+            <Image
+              src={theme === 'dark' ? '/linkedin.svg' : '/linkedin-white.svg'}
+              alt="linkedin"
+              width='35'
+              height='35'
+              onClick={() => openInNewTab('https://linkedin.com/in/tessabreen')}
+              className="ml-4 "
             />
             <Image
-              src={theme === 'dark' ? '/twitter-soft-blue.svg' : '/twitter-white.svg'}
+              src={theme === 'dark' ? '/github.svg' : '/github-white.svg'}
+              alt="linkedin"
+              width='35'
+              height='35'
+              onClick={() => openInNewTab('https://github.com/Mynameistessa')}
+            />
+            <Image
+              src={theme === 'dark' ? 'twitter-black.svg' : '/twitter-ivory.svg'}
               alt="twitter"
-              width='40'
-              height='40'
-              className='cursor-pointer'
+              width='35'
+              height='35'
               onClick={() => openInNewTab('https://twitter.com/mynameistessa3')}
             />
             <ThemeButton />
           </div>
         </div>
         {children}
-        <footer className="text-center font-light lg:text-left mt-auto border-t dark:border-soft-blue border-neutral-900 border-dotted">
+        <footer className="text-center lg:text-left mt-auto border-t dark:border-white border-almost-black border-dotted">
           <div className="dark:text-white text-neutral-900 text-center p-4" >
             Copyright © 2023 Tessa Breen | Next.js v13.1.1 & Tailwind Elements v1.0.0-alpha13
           </div>

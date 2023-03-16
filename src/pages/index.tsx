@@ -1,17 +1,14 @@
 import Head from 'next/head'
-import styles from '../../styles/Home.module.css'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-// import 'tw-elements';
 import React, { useState } from 'react';
 
 import Contents from '../components/dropdown'
 
 import Layout from '../components/Layout/layout'
-import Link from 'next/link'
-import Tabs from '../components/tabs'
-import Home from './home'
+import CV from './CV'
+import Interests from '../components/interests'
 
 
 
@@ -24,26 +21,53 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/close-clover.png" />
       </Head>
-
-      <div className="flex place-content-evenly m-10  justify-center">
-        {/* <div className="md:mb-0 mr-5"> */}
-        <div className="w-1/3 relative overflow-hidden bg-no-repeat bg-cover mr-5">
-          <img
-            src="/me.jpg"
-            className="rounded-lg"
-            alt="Avatar"
-          // width="33%"
-          />
-          <div className="w-1/3 rounded h-auto absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-fixed opacity-0 hover:opacity-40 transition duration-300 ease-in-out bg-white"></div>
-          {/* <div className="text-white absolute top-1/2 left-1/2 origin-center">Cornwall 2022</div> */}
-          {/* </div> */}
+      <div className="grid m-8 lg:mb-24 bg-['/cinammon.jpg']">
+        <div className='sm:grid lg:flex'>
+          <div>
+            <div className="overflow-hidden bg-no-repeat bg-cover px-4 sm:mb-4">
+              <Image
+                src="/me.jpg"
+                className="rounded-lg"
+                alt="Avatar"
+                width="360"
+                height="300"
+              />
+              <figcaption className="text-sm text-neutral-600 dark:text-neutral-400">
+                Cornwall '22.
+              </figcaption>
+            </div>
+          </div>
+          <div className='dark:text-white text-almost-black max-w-s text-left leading-loose '>
+            <p className='text-lg mb-4 '>Hello, I'm Tessa!</p>
+            I'm a Front-End Software Engineer at {' '}
+            <a className='group transition-all duration-300 ease-in-out' target="_blank" rel="noreferrer" href="https://unity.com">
+              <span className='bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                Unity Technologies
+              </span>
+            </a>
+            {' '} building an in-house continuous integration system.
+            <br />
+            <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="group transition-all duration-300 ease-in-out">
+              <span className='bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                Currently reading
+              </span>
+            </a>: A Life in Parts by Bryan Cranston
+            <p className=''>I enjoy solving problems and working with great people along the way.</p>
+            <p>I draw portraits and make music in my spare time.</p>
+          </div>
         </div>
-        <p className="text-base text-justify font-sans-pro leading-relaxed mt-0 mb-4 dark:text-white text-neutral-900 ">
-          Hi, I'm Tessa.<br />
-          I currently work as a Front-End Software Engineer at <a target="_blank" href="https://unity.com" className="underline">Unity Technologies</a>  building an in-house continuous integration system.
-
-        </p>
+        {/* <div className='ml-auto'>
+          Recent posts
+          <div className='text-right'>
+            About
+          </div>
+          <div className='text-right'>
+            CV
+          </div>
+        </div> */}
       </div>
+      <CV />
+      {/* <Interests /> */}
     </Layout>
   )
 }

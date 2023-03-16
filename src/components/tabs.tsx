@@ -3,6 +3,7 @@ import React from "react";
 import CV from "../pages/CV";
 import styled from 'styled-components';
 import styles from '../../styles/Home.module.css'
+import Link from "next/link";
 
 const StyledHeader = styled.div`
   display:flex;
@@ -21,88 +22,73 @@ const Tabs: React.FC<TabsProps> = () => {
     <>
       <div className="flex items-center justify-center ml-4">
         <div className="inline-flex " role="group">
-          <a
+          <Link
             href="/"
             aria-current="page"
             className="
               px-6
               py-2.5
-              bg-blue-800
+              bg-ivory
               rounded
               font-bold
               text-m
               leading-tight
-              focus:bg-sky-800 focus:outline-none focus:ring-0
-              transition
-              duration-150
-              ease-in-out
-              text-seablue
-              dark:text-navy
-              bg-sky-600
-              hover:text-white
-              hover:dark:text-white
-              hover:bg-sky-900
-              active:text-white
-              dark:bg-soft-blue
+              // focus:bg-sky-800 focus:outline-none focus:ring-0
+              // transition
+              // duration-150
+              // ease-in-out
+              text-sky-800
+              dark:bg-ivory
+              // active:text-white
               mr-2
             "
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/CV"
             className="
               px-6
               py-2.5
-              bg-blue-600
-              text-seablue
+              bg-ivory
+              text-sky-800
               font-bold
               rounded
               text-m
               leading-tight
-              focus:bg-sky-800 focus:outline-none focus:ring-0
-              transition
-              duration-150
-              ease-in-out
-              dark:text-navy
-              bg-sky-600
-              hover:text-white
-              hover:dark:text-white
-              hover:bg-sky-900
-              active:text-white
-              active:bg-sky-800
-              dark:bg-soft-blue
+              // focus:bg-sky-800 focus:outline-none focus:ring-0
+              // transition
+              // duration-150
+              // ease-in-out
+              // active:text-white
+              // active:bg-sky-800
+              dark:bg-ivory
               mr-2
             "
           >
             CV
-          </a>
-          <a
+          </Link>
+          <Link
             href="/music"
             className="
               px-6
               py-2.5
-              bg-blue-600
               rounded
-              dark:text-navy text-seablue
+            text-sky-800
               font-bold
               text-m
               leading-tight
-              focus:bg-sky-800 focus:outline-none focus:ring-0
-              transition
-              duration-150
-              ease-in-out
-              bg-sky-600
-              hover:text-white
-              hover:bg-sky-900
-              hover:dark:text-white
-              active:text-white
-              active:bg-sky-800
-              dark:bg-soft-blue
+              // focus:bg-sky-800 focus:outline-none focus:ring-0
+              // transition
+              // duration-150
+              // ease-in-out
+              // active:text-white
+              // active:bg-sky-800
+              bg-ivory
             "
           >
             Interests
-          </a>
+          </Link>
         </div>
       </div>
     </>
