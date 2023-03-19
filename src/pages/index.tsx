@@ -21,7 +21,7 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/close-clover.png" />
       </Head>
-      <div className="grid m-8 lg:mb-24 bg-['/cinammon.jpg']">
+      <div className="grid m-8 lg:mb-24">
         <div className='sm:grid lg:flex'>
           <div>
             <div className="overflow-hidden bg-no-repeat bg-cover px-4 sm:mb-4">
@@ -47,13 +47,13 @@ export default function App() {
             </a>
             {' '} building an in-house continuous integration system.
             <br />
+            <p className=''>I enjoy solving problems and working with great people along the way.</p>
+            <p>I also draw portraits and make music in my spare time.</p>
             <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="group transition-all duration-300 ease-in-out">
               <span className='bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
                 Currently reading
               </span>
             </a>: A Life in Parts by Bryan Cranston
-            <p className=''>I enjoy solving problems and working with great people along the way.</p>
-            <p>I draw portraits and make music in my spare time.</p>
           </div>
         </div>
         {/* <div className='ml-auto'>
@@ -66,6 +66,11 @@ export default function App() {
           </div>
         </div> */}
       </div>
+
+      {/* learning to make hero image */}
+      {/* <div className="text-almost-black bg-[url('/photoo.JPG')]">
+        testing
+      </div> */}
       <CV />
       {/* <Interests /> */}
     </Layout>

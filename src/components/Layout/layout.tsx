@@ -38,7 +38,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element | null => {
         <link rel="icon" href="/close-clover.png" />
       </Head>
       <div >
-        <div className='flex flex-row pb-4 pt-4 bg-sky-800 dark:bg-white'>
+        <div className='flex flex-row pb-4 pt-4 bg-gradient-to-r from-sky-600 to-sky-800 dark:from-seablue dark:to-white '>
           {/* <Tabs /> */}
           {/* <StyledHeading className={`ml-8 text-3xl dark:text-dolphin-blue text-white font-bold`}>Tessa Breen</StyledHeading> */}
           <h1 className={`ml-8 text-3xl dark:text-almost-black text-white font-bold`}>Tessa Breen</h1>

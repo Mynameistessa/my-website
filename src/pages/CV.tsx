@@ -18,8 +18,6 @@ const CV: React.FC = () => {
     return null;
   }
 
-  console.log(showSection, 'show section')
-
   return (
     // <Layout>
     <div className="m-8">
