@@ -7,7 +7,7 @@ import Layout from "../components/Layout/layout";
 
 const CV: React.FC = () => {
   const [mounted, setMounted] = useState(false);
-  const [showSection, setShowSection] = useState({ 'unity': true, 'bbc': false, 'physics': false });
+  const [showSection, setShowSection] = useState({ 'unity': true, 'bbc': false, 'physics': false, 'dabapps': false });
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -86,8 +86,8 @@ const CV: React.FC = () => {
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
-                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-warm-yellow px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">AWS</span>
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-warm-yellow px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">AWS</span>
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-brick-red px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Scala</span>
                     </div>
                   </div>
@@ -100,6 +100,34 @@ const CV: React.FC = () => {
                 </div>
                 <div className={`${showSection.bbc === true ? '' : 'hidden'} dark:text-white text-neutral-900`}>
                   <div className="text-m whitespace-nowrap px-2 py-4">Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS.</div>
+                </div>
+                <div onClick={() => setShowSection({ ...showSection, 'dabapps': !showSection.dabapps })} className="grid lg:grid-cols-4 sm:grid-cols-2 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
+                  <div className="px-6 py-4 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
+                    <Image
+                      src={'/dabapps-logo.png'}
+                      alt="dabapps"
+                      width='110'
+                      height='110'
+                    />
+                  </div>
+                  <div>
+                    <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2">
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-green-700 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Django</span>
+                    </div>
+                  </div>
+                  <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+                    Full-Stack Software Engineer
+                  </div>
+                  <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
+                    2020-2021
+                  </div>
+                </div>
+                <div className={`${showSection.dabapps === true ? '' : 'hidden'} dark:text-white text-neutral-900 `}>
+                  <td className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">I worked in an agile team to build webapps for brands such as Centurion, Xperta & Peoplewise.</td>
                 </div>
                 <div onClick={() => setShowSection({ ...showSection, 'physics': !showSection.physics })} className="grid lg:grid-cols-4 sm:grid-cols-2 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
                   <div className="px-6 py-4 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
