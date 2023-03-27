@@ -10,7 +10,8 @@ module.exports = {
     typography: (theme) => ({}),
     extend: {
       backgroundImage: {
-        'hero': '/cinammon.jpg'
+        // 'hero-pattern': '/cinammon.jpg'
+        'cinammon': "url('/photoo.JPG')"
       },
       colors: {
         'seablue': '#E3F6FF',

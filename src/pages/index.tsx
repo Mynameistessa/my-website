@@ -4,12 +4,11 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react';
 
-import Contents from '../components/dropdown'
+import Contents from '../components/dropdown';
 
-import Layout from '../components/Layout/layout'
-import CV from './CV'
-import Interests from '../components/interests'
-
+import Layout from '../components/Layout/layout';
+import CV from './CV';
+import Interests from '../components/interests';
 
 
 export default function App() {
@@ -33,7 +32,7 @@ export default function App() {
                 height="300"
               />
               <figcaption className="text-sm text-neutral-600 dark:text-neutral-400">
-                Cornwall '22.
+                <i>Cornwall '22.</i>
               </figcaption>
             </div>
           </div>
@@ -66,6 +65,16 @@ export default function App() {
           </div>
         </div> */}
       </div>
+
+
+      {/* <div className='float-right mb-2'>
+        <Image
+          src={'/hackathon.jpg'}
+          alt='hackathon 2022'
+          width={'200'}
+          height={'200'}
+        />
+      </div> */}
 
       {/* learning to make hero image */}
       {/* <div className="text-almost-black bg-[url('/photoo.JPG')]">

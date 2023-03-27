@@ -1,9 +1,16 @@
 
 import React, { useEffect, useState } from "react";
-import Image from 'next/image'
+import Image from 'next/image';
 import { useTheme } from 'next-themes';
-import { openInNewTab } from "../utils/newtab";
-import Layout from "../components/Layout/layout";
+import styled from 'styled-components';
+
+// make more responsive later
+const StyledGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+
+  // lg:grid-cols-5 sm:grid-cols-2
+`
 
 const CV: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -44,7 +51,8 @@ const CV: React.FC = () => {
           <div className="inline-block min-w-full sm:px-6 lg:px-8">
             <div className="overflow-hidden">
               <div className="min-w-full grid">
-                <div onClick={() => setShowSection({ ...showSection, 'unity': !showSection.unity })} className="grid lg:grid-cols-4 sm:grid-cols-2 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
+                {/* <div onClick={() => setShowSection({ ...showSection, 'unity': !showSection.unity })} className="grid lg:grid-cols-5 sm:grid-cols-2 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow"> */}
+                <StyledGrid onClick={() => setShowSection({ ...showSection, 'unity': !showSection.unity })} className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
                   <div className="px-6 py-4 whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
                     <Image
                       src={theme === 'dark' ? '/unity-white.png' : '/Unity.png'}
@@ -67,11 +75,14 @@ const CV: React.FC = () => {
                   <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
                     2022 - Present
                   </div>
-                </div>
+                  <div className="float-right mr-4">
+                    <Image src={theme === 'dark' ? '/down-chevron-white.svg' : '/down-chevron.svg'} alt='expand section' width='20' height='20' />
+                  </div>
+                </StyledGrid>
                 <div className={`${showSection.unity === true ? '' : 'hidden'} `}>
                   <div className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">Working on an internal continuous integration system.</div>
                 </div>
-                <div onClick={() => setShowSection({ ...showSection, 'bbc': !showSection.bbc })} className="grid lg:grid-cols-4 sm:grid-cols-2 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
+                <StyledGrid onClick={() => setShowSection({ ...showSection, 'bbc': !showSection.bbc })} className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
                   <div className="px-6 py-4 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
                     <Image
                       src={'/BBC.svg'}
@@ -82,7 +93,7 @@ const CV: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2">
+                    <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 mb-2">
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
@@ -97,11 +108,14 @@ const CV: React.FC = () => {
                   <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
                     2020 - 2022
                   </div>
-                </div>
+                  <div className="float-right mr-4">
+                    <Image src={theme === 'dark' ? '/down-chevron-white.svg' : '/down-chevron.svg'} alt='expand section' width='20' height='20' />
+                  </div>
+                </StyledGrid>
                 <div className={`${showSection.bbc === true ? '' : 'hidden'} dark:text-white text-neutral-900`}>
                   <div className="text-m whitespace-nowrap px-2 py-4">Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS.</div>
                 </div>
-                <div onClick={() => setShowSection({ ...showSection, 'dabapps': !showSection.dabapps })} className="grid lg:grid-cols-4 sm:grid-cols-2 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
+                <StyledGrid onClick={() => setShowSection({ ...showSection, 'dabapps': !showSection.dabapps })} className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
                   <div className="px-6 py-4 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
                     <Image
                       src={'/dabapps-logo.png'}
@@ -125,11 +139,14 @@ const CV: React.FC = () => {
                   <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
                     2020-2021
                   </div>
-                </div>
+                  <div className="float-right mr-4">
+                    <Image src={theme === 'dark' ? '/down-chevron-white.svg' : '/down-chevron.svg'} alt='expand section' width='20' height='20' />
+                  </div>
+                </StyledGrid>
                 <div className={`${showSection.dabapps === true ? '' : 'hidden'} dark:text-white text-neutral-900 `}>
                   <td className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">I worked in an agile team to build webapps for brands such as Centurion, Xperta & Peoplewise.</td>
                 </div>
-                <div onClick={() => setShowSection({ ...showSection, 'physics': !showSection.physics })} className="grid lg:grid-cols-4 sm:grid-cols-2 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
+                <StyledGrid onClick={() => setShowSection({ ...showSection, 'physics': !showSection.physics })} className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
                   <div className="px-6 py-4 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
                     <Image
                       src={'/ICL.png'}
@@ -150,7 +167,10 @@ const CV: React.FC = () => {
                   <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
                     2014 - 2018
                   </div>
-                </div>
+                  <div className="float-right mr-4">
+                    <Image src={theme === 'dark' ? '/down-chevron-white.svg' : '/down-chevron.svg'} alt='expand section' width='20' height='20' />
+                  </div>
+                </StyledGrid>
                 <div className={`${showSection.physics === true ? '' : 'hidden'} dark:text-white text-neutral-900 `}>
                   <td className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">I started studying physics with theoretical physics before switching to physics.</td>
                 </div>
@@ -169,7 +189,7 @@ const CV: React.FC = () => {
                 hover:shadow-[0_8px_9px_-4px_rgba(170,74,68,0.3),0_4px_18px_0_rgba(170,74,68,0.2)] focus:bg-primary-600 
                 focus:shadow-[0_8px_9px_-4px_rgba(170,74,68,0.3),0_4px_18px_0_rgba(170,74,68,0.2)] focus:outline-none
                 focus:ring-0 active:bg-brick-red active:shadow-[0_8px_9px_-4px_rgba(170,74,68,0.3),0_4px_18px_0_rgba(170,74,68,0.2)]">
-              Download CV
+              Download Resume
             </button>
           </div>
         </a>
