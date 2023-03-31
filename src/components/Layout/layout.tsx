@@ -3,12 +3,10 @@ import React, { useState } from 'react';
 import { useEffect } from 'react'
 import { useTheme } from 'next-themes';
 
-import Tabs from '../tabs';
-import styled from 'styled-components';
 import ThemeButton from '../theme'
-import styles from '../../../styles/Home.module.css'
 import Head from 'next/head';
 import { openInNewTab } from '../../utils/newtab';
+import packageJson from '../../../package.json';
 
 type LayoutProps = {
   children: React.ReactNode,
@@ -94,7 +92,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element | null => {
         {children}
         <footer className="text-center lg:text-left mt-auto border-t dark:border-white border-almost-black border-dotted">
           <div className="dark:text-white text-neutral-900 text-center p-4" >
-            Copyright © 2023 Tessa Breen | Next.js v13.1.1 & Tailwind Elements v1.0.0-alpha13
+            Copyright © 2023 Tessa Breen | Next.js {packageJson.dependencies.next} & Tailwind Elements{packageJson.dependencies['tw-elements']}
           </div>
         </footer>
       </div>
