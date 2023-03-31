@@ -4,13 +4,14 @@ import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import styled from 'styled-components';
 
-// make more responsive later
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  grid-template-columns: 200px 1fr 1fr 1fr auto;
 
-  // lg:grid-cols-5 sm:grid-cols-2
-`
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
 
 const CV: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -28,24 +29,6 @@ const CV: React.FC = () => {
   return (
     // <Layout>
     <div className="m-8">
-      {/* <div className="flex flex-row-reverse m-4 cursor-pointer">
-        <Image
-          src={theme === 'dark' ? '/linkedin-white.svg' : '/linkedin.svg'}
-          alt="linkedin"
-          width='45'
-          height='45'
-          onClick={() => openInNewTab('https://linkedin.com/in/tessabreen')}
-          className="ml-4 cursor-pointer"
-        />
-        <Image
-          src={theme === 'dark' ? '/github-white.svg' : '/github.svg'}
-          alt="linkedin"
-          width='45'
-          height='45'
-          onClick={() => openInNewTab('https://github.com/Mynameistessa')}
-          className="cursor-pointer"
-        />
-      </div> */}
       <div className="flex flex-col cursor-pointer mb-36">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div className="inline-block min-w-full sm:px-6 lg:px-8">
@@ -62,16 +45,18 @@ const CV: React.FC = () => {
                       className="mr-2"
                     />
                   </div>
-                  <div>
-                    <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2">
-                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
-                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
-                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
-                    </div>
-                  </div>
                   <div className="text-m  dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
                     Front-End Software Engineer
                   </div>
+                  <div>
+                    <div className="xs:invisible flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2">
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
+                      <span className="text-white inline-block whitespace-nowrap rounded-full bg-violet-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux Toolkit</span>
+                    </div>
+                  </div>
+
                   <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
                     2022 - Present
                   </div>
@@ -80,7 +65,7 @@ const CV: React.FC = () => {
                   </div>
                 </StyledGrid>
                 <div className={`${showSection.unity === true ? '' : 'hidden'} `}>
-                  <div className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">Working on an internal continuous integration system.</div>
+                  <div className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">Working on an internal continuous integration system for internal developers.</div>
                 </div>
                 <StyledGrid onClick={() => setShowSection({ ...showSection, 'bbc': !showSection.bbc })} className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
                   <div className="px-6 py-4 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
@@ -92,6 +77,9 @@ const CV: React.FC = () => {
                       className="mr-2"
                     />
                   </div>
+                  <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+                    Full-Stack Software Engineer
+                  </div>
                   <div>
                     <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 mb-2">
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
@@ -101,9 +89,6 @@ const CV: React.FC = () => {
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-warm-yellow px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">AWS</span>
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-brick-red px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Scala</span>
                     </div>
-                  </div>
-                  <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
-                    Full-Stack Software Engineer
                   </div>
                   <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
                     2020 - 2022
@@ -120,9 +105,12 @@ const CV: React.FC = () => {
                     <Image
                       src={'/dabapps-logo.png'}
                       alt="dabapps"
-                      width='110'
-                      height='110'
+                      width='90'
+                      height='90'
                     />
+                  </div>
+                  <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+                    Full-Stack Software Engineer
                   </div>
                   <div>
                     <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2">
@@ -132,9 +120,6 @@ const CV: React.FC = () => {
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-green-700 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Django</span>
                     </div>
-                  </div>
-                  <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
-                    Full-Stack Software Engineer
                   </div>
                   <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
                     2020-2021
@@ -155,14 +140,14 @@ const CV: React.FC = () => {
                       height='120'
                     />
                   </div>
+                  <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+                    BSc Physics
+                  </div>
                   <div>
                     <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2">
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Philosophy Society</span>
                       <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">IC Radio</span>
                     </div>
-                  </div>
-                  <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
-                    BSc Physics
                   </div>
                   <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
                     2014 - 2018
