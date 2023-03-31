@@ -44,10 +44,10 @@ export default function App() {
                 Unity Technologies
               </span>
             </a>
-            {' '} building an in-house continuous integration system.
+            {' '} building an in-house continuous integration system for internal developers.
             <br />
             <p className=''>I enjoy solving problems and working with great people along the way.</p>
-            <p>I also draw portraits and make music in my spare time.</p>
+            <p>In my spare time I draw portraits and make music and enjoy nature.</p>
             <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="group transition-all duration-300 ease-in-out">
               <span className='bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
                 Currently reading
@@ -65,8 +65,6 @@ export default function App() {
           </div>
         </div> */}
       </div>
-
-
       {/* <div className='float-right mb-2'>
         <Image
           src={'/hackathon.jpg'}
