@@ -101,7 +101,7 @@ const CV: React.FC = () => {
                   <div className="text-m whitespace-nowrap px-2 py-4">Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS.</div>
                 </div>
                 <StyledGrid onClick={() => setShowSection({ ...showSection, 'dabapps': !showSection.dabapps })} className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-almost-black hover:bg-warm-yellow">
-                  <div className="px-6 py-4 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
+                  <div className="px-6 py-4 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
                     <Image
                       src={'/dabapps-logo.png'}
                       alt="dabapps"

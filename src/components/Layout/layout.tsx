@@ -7,6 +7,7 @@ import ThemeButton from '../theme'
 import Head from 'next/head';
 import { openInNewTab } from '../../utils/newtab';
 import packageJson from '../../../package.json';
+import Link from 'next/link';
 
 type LayoutProps = {
   children: React.ReactNode,
@@ -37,33 +38,17 @@ const Layout = ({ children }: LayoutProps): JSX.Element | null => {
       </Head>
       <div >
         <div className='flex flex-row pb-4 pt-4 bg-gradient-to-r from-sky-600 to-sky-800 dark:from-seablue dark:to-white '>
-          {/* <Tabs /> */}
-          {/* <StyledHeading className={`ml-8 text-3xl dark:text-dolphin-blue text-white font-bold`}>Tessa Breen</StyledHeading> */}
-          <h1 className={`ml-8 text-3xl dark:text-almost-black text-white font-bold`}>Tessa Breen</h1>
-          {/* <Image
-            src={'/logo1.png'}
-            alt="logo"
-            width='100'
-            height='100'
-            className="ml-4 absolute"
-          /> */}
+          <h1 className={`ml-8 text-3xl dark:text-almost-black text-white font-bold self-center`}>Tessa Breen</h1>
           <div className='flex ml-auto space-x-8 mr-8'>
-            {/* <Image
-              src={'/youtube-ivory.svg'}
-              alt="youtube"
-              width='40'
-              height='40'
-              className='cursor-pointer fill-ivory'
-              onClick={() => openInNewTab('https://www.youtube.com/channel/UCb3YyYMUP9ViwoAnhZStVkA')}
-            />
-            <Image
-              src={'/insta-ivory.svg'}
-              alt="instagram"
-              width='40'
-              height='40'
-              className='cursor-pointer'
-              onClick={() => openInNewTab('https://www.instagram.com/tessabreen1994/')}
-            /> */}
+            <Link
+              // type="button"
+              data-te-ripple-init
+              // onClick={()=> console.log('go to blog page')}
+              href="/blog"
+              data-te-ripple-color="light"
+              class="dark:text-neutral-900 text-white rounded pb-2 pt-2.5 text-lg font-medium leading-normal text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700 dark:hover:bg-neutral-700">
+              Blog
+            </Link>
             <Image
               src={theme === 'dark' ? '/linkedin.svg' : '/linkedin-white.svg'}
               alt="linkedin"
