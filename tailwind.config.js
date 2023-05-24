@@ -1,17 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ["./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./ node_modules / tw - elements / dist / ts/**/ *.ts"
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  purge: ['./src/**/*.tsx'],
   theme: {
-    typography: (theme) => ({}),
     extend: {
       backgroundImage: {
-        // 'hero-pattern': '/cinammon.jpg'
-        'cinammon': "url('/photoo.JPG')"
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
         'seablue': '#E3F6FF',
@@ -35,10 +35,10 @@ module.exports = {
         'dolphin-blue': '#00E7FF',
         'grey': '#ECECEC',
         'ivory': '#fffff0',
-        'miffy': '#003D6D'
+        'miffy': '#003D6D',
+        'neutral-900': '#171717',
       }
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('tw-elements/dist/plugin')],
-  variants: {},
+  plugins: []
 }
