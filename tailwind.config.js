@@ -13,6 +13,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'body': ['"Inter var"', '"Roboto"', '"Open Sans"'],
+      },
       colors: {
         'seablue': '#E3F6FF',
         'sky-900': '#0c4a6e',
@@ -37,6 +40,7 @@ module.exports = {
         'ivory': '#fffff0',
         'miffy': '#003D6D',
         'neutral-900': '#171717',
+        'slate-800': '#1e293b'
       }
     },
   },
