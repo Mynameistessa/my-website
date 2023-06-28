@@ -1,6 +1,7 @@
 "use client";
 import CV from '@/components/CV';
 import Image from 'next/image';
+import { ArrowSquareOut } from 'phosphor-react';
 
 export default function Home() {
   return (
@@ -24,7 +25,6 @@ export default function Home() {
             </div>
             <div className='dark:text-white text-almost-black max-w-s text-left leading-loose font-body text-lg '>
               <p className='text-xl mb-4 font-body'>Hello!</p>
-
               <div className='text-base'>
                 I&apos;m a Front-End Software Engineer at {' '}
                 <a className='group transition-all duration-300 ease-in-out' target="_blank" rel="noreferrer" href="https://unity.com">
@@ -40,11 +40,12 @@ export default function Home() {
                 <div className='mt-4'>
                   <p>Check out my blog for my latest posts where I talk about recent topics I&apos;ve studied in software development and whatever I find interesting.</p>
                   <br />
-                  <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="group transition-all duration-300 ease-in-out">
-                    <span className='italic bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
-                      Currently reading
+                  <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="group transition-all duration-300 ease-in-out flex items-center">
+                    <span className=' bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                      Currently reading: <i>A Life in Parts by Bryan Cranston</i>
                     </span>
-                  </a>: A Life in Parts by Bryan Cranston
+                    <ArrowSquareOut size={20} color={'#FDA769'} className='ml-2' />
+                  </a>
                 </div>
               </div>
             </div>
