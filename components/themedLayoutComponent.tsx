@@ -11,14 +11,11 @@ export default function ThemedLayoutComponent({
 }: {
   children: any
 }) {
-  // cant use context provider here as it needs a client component to work with
   return (
-    // <MyThemeContextProvider> before sam
     <ThemeProvider attribute="class">
       <HeaderFooter>
         {children}
       </HeaderFooter>
     </ThemeProvider>
-    // </MyThemeContextProvider>
   )
 }

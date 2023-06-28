@@ -5,6 +5,7 @@ import { openInNewTab } from '@/utils/openInNewTab';
 import ThemeButton from "./ThemeButton";
 import { TwitterLogo, GithubLogo, LinkedinLogo } from 'phosphor-react';
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function HeaderFooter({
   children,
@@ -12,6 +13,17 @@ export default function HeaderFooter({
   children: React.ReactNode
 }) {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
+  const isDarkTheme = Boolean(theme === 'dark');
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -29,23 +41,24 @@ export default function HeaderFooter({
             alt="linkedin"
             width='35'
             height='35'
-            color={theme === 'dark' ? 'black' : 'white'}
+            color={isDarkTheme ? 'black' : 'white'}
             onClick={() => openInNewTab('https://linkedin.com/in/tessabreen')}
             className="ml-4"
           />
           <GithubLogo
             alt="github"
             size={32}
-            color={theme === 'dark' ? 'black' : 'white'}
+            color={isDarkTheme ? 'black' : 'white'}
+            fill={isDarkTheme ? 'black' : 'white'}
             onClick={() => openInNewTab('https://github.com/Mynameistessa')}
           />
           <TwitterLogo
             alt="twitter"
             size={32}
-            color={theme === 'dark' ? 'black' : 'white'}
+            color={isDarkTheme ? 'black' : 'white'}
             onClick={() => openInNewTab('https://twitter.com/mynameistessa3')}
           />
-          <ThemeButton setTheme={setTheme} theme={theme} />
+          <ThemeButton />
         </div>
       </div>
       {children}
@@ -56,5 +69,4 @@ export default function HeaderFooter({
       </footer>
     </div>
   )
-
 }

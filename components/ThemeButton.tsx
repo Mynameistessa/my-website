@@ -9,15 +9,17 @@ export interface ThemeButtonProps {
   setTheme: (theme: string) => void
 }
 
-const ThemeButton = ({ setTheme, theme }: ThemeButtonProps) => {
+const ThemeButton = () => {
+  const { theme, setTheme } = useTheme();
+  const isDarkTheme = Boolean(theme === 'dark');
 
   return (
     <Moon
       className="self-center"
       size={32}
-      color={theme === 'dark' ? 'black' : 'white'}
+      color={isDarkTheme ? '#000' : 'white'}
       onClick={() => {
-        setTheme(theme === 'light' ? 'dark' : 'light')
+        setTheme(isDarkTheme ? 'light' : 'dark')
       }}
     />
   )
