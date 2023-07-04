@@ -29,6 +29,21 @@ const CV: React.FC = () => {
 
   return (
     <div className="flex flex-col cursor-pointer mb-36">
+      <div className="flex flex-row-reverse space-x-2 py-2 float-right">
+        <a href="/CV.pdf" download>
+          <button
+            type="button"
+            data-te-ripple-init
+            data-te-ripple-color="light"
+            className="font-body inline-block rounded bg-brick-red px-6 pt-3 pb-2 text-xs font-medium leading-normal
+               text-white transition duration-150 ease-in-out active:bg-brick-red hover:bg-darker-brick mr-2">
+            Download Resume
+          </button>
+          <button className="font-body inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 pt-3 pb-2 text-xs leading-normal flex-row-reverse" onClick={() => console.log('toggle')}>
+            Expand/Collapse
+          </button>
+        </a>
+      </div>
 
       <div className="min-w-full grid">
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
@@ -62,7 +77,7 @@ const CV: React.FC = () => {
           </div>
         </StyledGrid>
         <div className={`${showSection.unity === true ? '' : 'hidden'} `}>
-          <div className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">Working on an internal continuous integration system for internal developers.</div>
+          <div className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">Working on an internal continuous integration system for internal developers</div>
         </div>
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
           <div className="px-6 py-4 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
@@ -95,7 +110,7 @@ const CV: React.FC = () => {
           </div>
         </StyledGrid>
         <div className={`${showSection.bbc === true ? '' : 'hidden'} dark:text-white text-neutral-900`}>
-          <div className="text-m whitespace-nowrap px-2 py-4">Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS.</div>
+          <div className="text-m whitespace-nowrap px-2 py-4">Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS</div>
         </div>
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
           <div className="px-6 py-4 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
@@ -126,7 +141,7 @@ const CV: React.FC = () => {
           </div>
         </StyledGrid>
         <div className={`${showSection.dabapps === true ? '' : 'hidden'} dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m`}>
-          I worked in an agile team to build webapps for brands such as Centurion, Xperta & Peoplewise.
+          I worked in an agile team to build webapps for brands such as Centurion, Xperta & Peoplewise
         </div>
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
           <div className="px-6 py-4 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
@@ -156,35 +171,20 @@ const CV: React.FC = () => {
         </StyledGrid>
         <div className={`${showSection.physics === true ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
-            <li className="mt-2">Courses included: Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and magnetism, Relativity, Fourier Analysis, Light and Matter and more
+            <li className="mt-2">Courses included: <i>Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and magnetism, Relativity, Fourier Analysis, Light and Matter and more</i>
             </li>
-            <li className="mt-2">Coursework included computing and laboratory modules where I used Python and pandas to derive relationships and transformed data to graph data</li>
+            <li className="mt-2">Coursework included computing and laboratory modules where I used Python to model data and derive known relationships and summarised in reports</li>
             <li className="mt-2">Extracurricular Activities:
               <ol className="list-disc list-inside pl-5 mt-2 space-y-1 ">
                 <li>Finalist in the <i>Althea-Imperial programme </i>(now named <a className="underline" href="https://www.imperialenterpriselab.com/we-innovate/">WE Innovate</a>), a 6-month long programme in which I designed a prototype of a device to be fitted to buildings to
-                  remove local air pollutants and ultimately competed pitched to judges for £30k funding prize
+                  remove local air pollutants and ultimately competed pitched to judges for funding
                 </li>
                 {/* <li>Business Horizons course</li> */}
-                <li>Enrolled in a course titled <i>Conflict, Crime and Justice</i>. This is a highly interdisciplinary course. Achieved first-class for essays on globalisation and the problems regarding the use of genetics in the court room </li>
+                <li>Enrolled in a course titled <i>Conflict, Crime and Justice</i> and achieved first-class for essays on globalisation and the problems regarding the use of genetics in the court room </li>
               </ol>
             </li>
           </ol>
         </div>
-      </div>
-      <div className="flex space-x-2 py-2 float-right">
-        <a href="/CV.pdf" download>
-          <button
-            type="button"
-            data-te-ripple-init
-            data-te-ripple-color="light"
-            className="font-body inline-block rounded bg-brick-red px-6 pt-3 pb-2 text-xs font-medium leading-normal
-               text-white shadow-[0_4px_9px_-4px_#AA4A44] transition duration-150 ease-in-out hover:bg-primary-600
-                hover:shadow-[0_8px_9px_-4px_rgba(170,74,68,0.3),0_4px_18px_0_rgba(170,74,68,0.2)] focus:bg-primary-600 
-                focus:shadow-[0_8px_9px_-4px_rgba(170,74,68,0.3),0_4px_18px_0_rgba(170,74,68,0.2)] focus:outline-none
-                focus:ring-0 active:bg-brick-red active:shadow-[0_8px_9px_-4px_rgba(170,74,68,0.3),0_4px_18px_0_rgba(170,74,68,0.2)]">
-            Download Resume
-          </button>
-        </a>
       </div>
     </div >
   )
