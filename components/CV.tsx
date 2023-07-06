@@ -14,10 +14,44 @@ const StyledGrid = styled.div`
   }
 `;
 
+enum Sections {
+  Unity = "unity",
+  BBC = "bbc",
+  DabApps = "dabapps",
+  Physics = "physics",
+}
+
 const CV: React.FC = () => {
   const [mounted, setMounted] = useState(false);
-  const [showSection, setShowSection] = useState({ 'unity': true, 'bbc': false, 'physics': false, 'dabapps': false });
   const { theme, setTheme } = useTheme();
+  const [showExpandAll, setShowExpandAll] = useState(false);
+  const [expandedList, setExpandedList] = useState<Array<string>>([Sections.Unity]);
+  const totalSections = 4
+
+  const areAllExpandedAndSetAllExpandedOrCollapsed = () => {
+    if (expandedList.length === totalSections) {
+      setExpandedList([])
+      return setShowExpandAll(false)
+    }
+    if (expandedList.length === 0) {
+      setExpandedList(['unity', 'physics', 'bbc', 'dabapps'])
+      return setShowExpandAll(true);
+    }
+    if (expandedList.length !== 0) {
+      setExpandedList([])
+      return setShowExpandAll(false)
+    }
+  }
+
+  const updateListOnExpandCollapse = (itemToAddRemove: string) => {
+    if (expandedList.includes(itemToAddRemove)) {
+      return setExpandedList(expandedList.filter(item => item !== itemToAddRemove, itemToAddRemove))
+    } else {
+      setExpandedList(expandedList.concat(itemToAddRemove));
+    }
+  }
+
+  const isDarkTheme = theme === 'dark';
 
   useEffect(() => {
     setMounted(true)
@@ -29,27 +63,31 @@ const CV: React.FC = () => {
 
   return (
     <div className="flex flex-col cursor-pointer mb-36">
-      <div className="flex flex-row-reverse space-x-2 py-2 float-right">
+      <div className="flex flex-row-reverse space-x-2 py-2 float-right gap-1">
         <a href="/CV.pdf" download>
           <button
             type="button"
             data-te-ripple-init
             data-te-ripple-color="light"
-            className="font-body inline-block rounded bg-brick-red px-6 pt-3 pb-2 text-xs font-medium leading-normal
-               text-white transition duration-150 ease-in-out active:bg-brick-red hover:bg-darker-brick mr-2">
+            className="font-body rounded bg-brick-red px-6 pt-3 pb-2 text-xs font-medium leading-normal
+               text-white transition duration-150 ease-in-out active:bg-brick-red hover:bg-darker-brick">
             Download Resume
           </button>
-          <button className="font-body inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 pt-3 pb-2 text-xs leading-normal flex-row-reverse" onClick={() => console.log('toggle')}>
-            Expand/Collapse
-          </button>
         </a>
+        <button className="font-body inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 text-xs leading-normal"
+          onClick={() => {
+            areAllExpandedAndSetAllExpandedOrCollapsed()
+
+          }}>
+          {expandedList.length === 0 ? 'Expand' : 'Collapse'} All
+        </button>
       </div>
 
       <div className="min-w-full grid">
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
           <div className="px-6 py-4 whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
             <Image
-              src={theme === 'dark' ? '/unity-white.png' : '/Unity.png'}
+              src={isDarkTheme ? '/unity-white.png' : '/Unity.png'}
               alt="unity-technologies"
               width='80'
               height='80'
@@ -73,10 +111,15 @@ const CV: React.FC = () => {
             2022 - Present
           </div>
           <div className="float-right mr-4">
-            <CaretDown size={32} color={theme === 'dark' ? 'white' : 'black'} onClick={() => setShowSection({ ...showSection, 'unity': !showSection.unity })} />
+            <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
+              onClick={() => {
+                updateListOnExpandCollapse(Sections.Unity);
+              }
+              }
+            />
           </div>
         </StyledGrid>
-        <div className={`${showSection.unity === true ? '' : 'hidden'} `}>
+        <div className={`${expandedList.includes(Sections.Unity) ? '' : 'hidden'} `}>
           <div className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">Working on an internal continuous integration system for internal developers</div>
         </div>
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
@@ -106,10 +149,15 @@ const CV: React.FC = () => {
             2020 - 2022
           </div>
           <div className="float-right mr-4">
-            <CaretDown size={32} color={theme === 'dark' ? 'white' : 'black'} onClick={() => setShowSection({ ...showSection, 'bbc': !showSection.bbc })} />
+            <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
+              onClick={() => {
+                updateListOnExpandCollapse(Sections.BBC);
+              }
+              }
+            />
           </div>
         </StyledGrid>
-        <div className={`${showSection.bbc === true ? '' : 'hidden'} dark:text-white text-neutral-900`}>
+        <div className={`${expandedList.includes(Sections.BBC) ? '' : 'hidden'} dark:text-white text-neutral-900`}>
           <div className="text-m whitespace-nowrap px-2 py-4">Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS</div>
         </div>
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
@@ -137,10 +185,14 @@ const CV: React.FC = () => {
             2020-2021
           </div>
           <div className="float-right mr-4">
-            <CaretDown size={32} color={theme === 'dark' ? 'white' : 'black'} onClick={() => setShowSection({ ...showSection, 'dabapps': !showSection.dabapps })} />
+            <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
+              onClick={() => {
+                updateListOnExpandCollapse(Sections.DabApps);
+              }
+              } />
           </div>
         </StyledGrid>
-        <div className={`${showSection.dabapps === true ? '' : 'hidden'} dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m`}>
+        <div className={`${expandedList.includes(Sections.DabApps) ? '' : 'hidden'} dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m`}>
           I worked in an agile team to build webapps for brands such as Centurion, Xperta & Peoplewise
         </div>
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
@@ -166,10 +218,15 @@ const CV: React.FC = () => {
             2014 - 2018
           </div>
           <div className="float-right mr-4">
-            <CaretDown size={32} color={theme === 'dark' ? 'white' : 'black'} onClick={() => setShowSection({ ...showSection, 'physics': !showSection.physics })} />
+            <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
+              onClick={() => {
+                updateListOnExpandCollapse(Sections.Physics);
+              }
+              }
+            />
           </div>
         </StyledGrid>
-        <div className={`${showSection.physics === true ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
+        <div className={`${expandedList.includes(Sections.Physics) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
             <li className="mt-2">Courses included: <i>Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and magnetism, Relativity, Fourier Analysis, Light and Matter and more</i>
             </li>
