@@ -83,7 +83,7 @@ const CV: React.FC = () => {
         </button>
       </div>
 
-      <div className="min-w-full grid">
+      <div className="min-w-full grid mt-8">
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
           <div className="px-6 py-4 whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
             <Image
@@ -97,20 +97,10 @@ const CV: React.FC = () => {
           <div className="text-m  dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             Front-End Software Engineer
           </div>
-          <div>
-            <div className="xs:invisible flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2">
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-violet-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux Toolkit</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
-            </div>
-          </div>
-
           <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
             2022 - Present
           </div>
-          <div className="float-right mr-4">
+          <div className="ml-auto mr-4">
             <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
               onClick={() => {
                 updateListOnExpandCollapse(Sections.Unity);
@@ -120,8 +110,24 @@ const CV: React.FC = () => {
           </div>
         </StyledGrid>
         <div className={`${expandedList.includes(Sections.Unity) ? '' : 'hidden'} `}>
-          <div className="dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m">Working on an internal continuous integration system for internal developers</div>
+          <div className="dark:text-white text-neutral-900 whitespace-nowrap text-m px-8 py-4">
+            <ol className="list-disc max-w-200 break-words">
+              <li>
+                Working on an internal continuous integration system for internal developers
+              </li>
+            </ol>
+          </div>
+          <div>
+            <div className="xs:invisible flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 mb-4">
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-violet-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux Toolkit</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
+            </div>
+          </div>
         </div>
+
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
           <div className="px-6 py-4 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
             <Image
@@ -135,20 +141,11 @@ const CV: React.FC = () => {
           <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
-          <div>
-            <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 mb-2">
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-peach-orange px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">AWS</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-brick-red px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Scala</span>
-            </div>
-          </div>
+
           <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
             2020 - 2022
           </div>
-          <div className="float-right mr-4">
+          <div className="ml-auto mr-4">
             <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
               onClick={() => {
                 updateListOnExpandCollapse(Sections.BBC);
@@ -157,8 +154,26 @@ const CV: React.FC = () => {
             />
           </div>
         </StyledGrid>
-        <div className={`${expandedList.includes(Sections.BBC) ? '' : 'hidden'} dark:text-white text-neutral-900`}>
-          <div className="text-m whitespace-nowrap px-2 py-4">Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS</div>
+        <div className={`${expandedList.includes(Sections.BBC) ? '' : 'hidden'} dark:text-white text-neutral-900 mb-4 px-8 py-4`}>
+          <ol className="list-disc max-w-200 break-words">
+            <li className="mt-2">Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS
+            </li>
+            <li className="mt-2">
+              Including development of the content management system
+              used by over 6000 journalists worldwide to discover,
+              create and curate world-class BBC content for the web,
+              mobile, apps and other platforms, most notably the BBC News and BBC Sport site</li>
+          </ol>
+          <div>
+            <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 mb-2 ">
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-peach-orange px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">AWS</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-brick-red px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Scala</span>
+            </div>
+          </div>
         </div>
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
           <div className="px-6 py-4 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
@@ -169,22 +184,14 @@ const CV: React.FC = () => {
               height='90'
             />
           </div>
-          <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+          <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold ">
             Full-Stack Software Engineer
           </div>
-          <div>
-            <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2">
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-green-700 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Django</span>
-            </div>
-          </div>
+
           <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
             2020-2021
           </div>
-          <div className="float-right mr-4">
+          <div className="ml-auto mr-4">
             <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
               onClick={() => {
                 updateListOnExpandCollapse(Sections.DabApps);
@@ -192,8 +199,32 @@ const CV: React.FC = () => {
               } />
           </div>
         </StyledGrid>
-        <div className={`${expandedList.includes(Sections.DabApps) ? '' : 'hidden'} dark:text-white text-neutral-900 px-2 py-4 whitespace-nowrap text-m`}>
-          I worked in an agile team to build webapps for brands such as Centurion, Xperta & Peoplewise
+        <div className={`${expandedList.includes(Sections.DabApps) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
+          <ol className="list-disc max-w-200 break-words">
+            <li>
+              I worked in an agile team to build webapps for brands including
+              <ol className="list-disc list-inside pl-5 mt-2 space-y-1 ">
+                <li>
+                  Centurion (a mobile app written in react native that controls a laboratory centrifuge)
+                </li>
+                <li>
+                  Xperta (Revolutionising the way legal professionals connect with expert witnesses)
+                </li>
+                <li>
+                  Peoplewise (award-winning assessment and development talent solutions)
+                </li>
+              </ol>
+            </li>
+          </ol>
+          <div>
+            <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 ">
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-green-700 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Django</span>
+            </div>
+          </div>
         </div>
         <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
           <div className="px-6 py-4 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
@@ -207,17 +238,11 @@ const CV: React.FC = () => {
           <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             BSc Physics
           </div>
-          <div>
-            <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2">
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-green-700 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Python</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Philosophy Society</span>
-              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">IC Radio</span>
-            </div>
-          </div>
+
           <div className="text-m dark:text-white text-neutral-900 px-6 py-4 sm:py-2 whitespace-nowrap">
             2014 - 2018
           </div>
-          <div className="float-right mr-4">
+          <div className="ml-auto mr-4">
             <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
               onClick={() => {
                 updateListOnExpandCollapse(Sections.Physics);
@@ -228,7 +253,7 @@ const CV: React.FC = () => {
         </StyledGrid>
         <div className={`${expandedList.includes(Sections.Physics) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
-            <li className="mt-2">Courses included: <i>Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and magnetism, Relativity, Fourier Analysis, Light and Matter and more</i>
+            <li className="mt-2">Courses included <i>Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and magnetism, Relativity, Fourier Analysis, Light and Matter and more</i>
             </li>
             <li className="mt-2">Coursework included computing and laboratory modules where I used Python to model data and derive known relationships and summarised in reports</li>
             <li className="mt-2">Extracurricular Activities:
@@ -241,6 +266,13 @@ const CV: React.FC = () => {
               </ol>
             </li>
           </ol>
+          <div>
+            <div className="flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 mb-4">
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-green-700 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Python</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-dolphin-blue px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Philosophy Society</span>
+              <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">IC Radio</span>
+            </div>
+          </div>
         </div>
       </div>
     </div >
