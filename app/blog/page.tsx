@@ -1,9 +1,9 @@
-const HomePage = () => {
+import Posts from "../../components/Posts";
+
+export default function Blog() {
   return (
-    <div className="flex w-full min-h-screen flex-col ">
-      <h1 className="m-4">Hello blog</h1>
-    </div>
+    <main className=' dark:bg-slate-600 bg-white min-h-screen flex flex-col text-black dark:text-white'>
+      <Posts />
+    </main>
   )
 }
-
-export default HomePage; 
