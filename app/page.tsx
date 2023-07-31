@@ -4,7 +4,7 @@ import Intro from '@/components/Intro';
 
 export default function Home() {
   return (
-    <main className="min-h-screen justify-between p-24 dark:bg-slate-600 bg-white">
+    <main className="min-h-screen justify-between p-24 dark:bg-black bg-white">
       <Intro />
       <Posts />
       <CV />

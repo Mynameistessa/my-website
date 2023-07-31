@@ -41,7 +41,9 @@ module.exports = {
         'ivory': '#fffff0',
         'miffy': '#003D6D',
         'neutral-900': '#171717',
-        'slate-800': '#1e293b'
+        'slate-800': '#1e293b',
+        'light-pink': '#FCC8D1',
+        'another-blue': '#0079FF'
       }
     },
   },

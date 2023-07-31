@@ -27,8 +27,8 @@ export default function HeaderFooter({
 
   return (
     <div className="flex min-h-screen flex-col">
-      <nav className='flex flex-row pb-4 pt-4 bg-gradient-to-r from-sky-600 to-sky-800 dark:from-seablue dark:to-white'>
-        <Link href="/" className={`ml-8 text-3xl dark:text-almost-black text-white font-bold self-center`}>Tessa Breen</Link>
+      <nav className='flex flex-row pb-4 pt-4 bg-gradient-to-r from-sky-600 to-sky-800 dark:from-another-blue dark:to-white'>
+        <Link href="/" className={`ml-8 text-3xl text-white dark:text-almost-black font-bold self-center`}>Tessa Breen</Link>
         <div className='flex ml-auto space-x-8 mr-8 items-center'>
           <LinkedinLogo
             alt="linkedin"
@@ -55,7 +55,7 @@ export default function HeaderFooter({
         </div>
       </nav>
       {children}
-      <footer className="text-center lg:text-left mt-auto border-t dark:border-almost-black border-almost-black border-dotted bg-gradient-to-r from-sky-600 to-sky-800 dark:from-seablue dark:to-white">
+      <footer className="text-center lg:text-left mt-auto border-t dark:border-almost-black border-almost-black border-dotted bg-gradient-to-r from-sky-600 to-sky-800 dark:from-another-blue dark:to-white">
         <div className="text-white dark:text-almost-black text-center p-4" >
           Copyright © 2023 Tessa Breen | Next.js {packageJson.dependencies.next} & Tailwind Elements
         </div>
