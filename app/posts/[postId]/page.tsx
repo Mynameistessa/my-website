@@ -33,7 +33,7 @@ export default async function Post({ params }: { params: { postId: string } }) {
   const { postId } = params
 
   if (!posts.find(post => post.id === postId)) {
-    return notFound() // could also be our custom 404 
+    notFound() // could also be our custom 404 
   }
 
   const { title, date, contentHtml } = await getPostData(postId)
@@ -47,7 +47,7 @@ export default async function Post({ params }: { params: { postId: string } }) {
       <article>
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <p>
-          <Link href="/blog">Back to home</Link>
+          <Link href="/">Back to home</Link>
         </p>
       </article>
     </main>

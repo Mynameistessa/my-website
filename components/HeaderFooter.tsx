@@ -30,13 +30,6 @@ export default function HeaderFooter({
       <nav className='flex flex-row pb-4 pt-4 bg-gradient-to-r from-sky-600 to-sky-800 dark:from-seablue dark:to-white'>
         <Link href="/" className={`ml-8 text-3xl dark:text-almost-black text-white font-bold self-center`}>Tessa Breen</Link>
         <div className='flex ml-auto space-x-8 mr-8 items-center'>
-          <Link
-            data-te-ripple-init
-            href="/blog"
-            data-te-ripple-color="light"
-            className=" text-white dark:text-black rounded pb-2 pt-2.5 text-lg font-medium leading-normal text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700">
-            Blog
-          </Link>
           <LinkedinLogo
             alt="linkedin"
             width='35'

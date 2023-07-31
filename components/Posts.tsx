@@ -1,11 +1,10 @@
-import React from 'react';
 import { getSortedPostsData } from '@/lib/posts';
 import ListItem from './ListItem';
 
-const components: React.FC = () => {
+export default function Posts() {
   const posts = getSortedPostsData();
   return (
-    <section className='m-8'>
+    <section className='mb-16'>
       <h2 className='font-bold text-2xl'>Blog Posts</h2>
       <ul className='w-full'>
         {posts.map(post => (
@@ -15,5 +14,3 @@ const components: React.FC = () => {
     </section>
   );
 };
-
-export default components; 
