@@ -7,11 +7,14 @@ import { CaretDown } from 'phosphor-react';
 
 const StyledGrid = styled.div`
   display: grid;
-  grid-template-columns: 400px 475px 1fr 1fr;
 
-  @media only screen and (max-width: 850px) {
-    grid-template-columns: 1fr 1fr;
-  }
+  // @media only screen and (min-width: 1000px) {
+  //   grid-template-columns: 400px 475px 1fr 1fr;
+  // }
+
+  // @media only screen and (max-width: 850px) {
+  //   grid-template-columns: 200px 275px 1fr 1fr;
+  // }
 `;
 
 enum Sections {
@@ -86,8 +89,8 @@ const CV: React.FC = () => {
       </div>
 
       <div className="flex flex-col mt-8">
-        <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="px-6 py-2 whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
+        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+          <div className="basis-32 px-6 py-2 whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
             <Image
               src={isDarkTheme ? '/unity-white.png' : '/Unity.png'}
               alt="unity-technologies"
@@ -95,10 +98,10 @@ const CV: React.FC = () => {
               height='80'
             />
           </div>
-          <div className="text-m  dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold grow-2">
+          <div className="text-m basis-72 dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             Front-End Software Engineer
           </div>
-          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap grow-0">
+          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap ">
             2022 - <i>Present</i>
           </div>
           <div className="ml-auto mr-4 pl-4">
@@ -106,7 +109,7 @@ const CV: React.FC = () => {
               onClick={() => updateListOnExpandCollapse(Sections.Unity)}
             />
           </div>
-        </StyledGrid>
+        </div>
         <div className={`${expandedList.includes(Sections.Unity) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
             <li>
@@ -123,8 +126,8 @@ const CV: React.FC = () => {
         </div>
 
 
-        <StyledGrid className=" items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="px-6 py-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
+        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+          <div className="basis-32 px-6 py-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
             <Image
               src={theme === 'dark' ? '/whitebbcblocks.svg.png' : '/newBBC.png'}
               alt="bbc-logo"
@@ -132,10 +135,10 @@ const CV: React.FC = () => {
               height='80'
             />
           </div>
-          <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold grow-2">
+          <div className="text-m basis-72 dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
-          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap grow-0">
+          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap ">
             2020 - 2022
           </div>
           <div className="ml-auto mr-4 pl-4">
@@ -145,7 +148,7 @@ const CV: React.FC = () => {
               }}
             />
           </div>
-        </StyledGrid>
+        </div>
         <div className={`${expandedList.includes(Sections.BBC) ? '' : 'hidden'} dark:text-white text-neutral-900 mb-4 px-8 py-4`}>
           <ol className="list-disc max-w-200 break-words">
             <li className="mt-2">Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS
@@ -167,8 +170,8 @@ const CV: React.FC = () => {
         </div>
 
 
-        <StyledGrid className="items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="px-6 py-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
+        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+          <div className="basis-32 px-6 py-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
             <Image
               src={'/dabapps.png'}
               alt="dabapps"
@@ -176,11 +179,11 @@ const CV: React.FC = () => {
               height='80'
             />
           </div>
-          <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold grow-2">
+          <div className="text-m basis-72 dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
 
-          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap grow-0">
+          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap">
             2020-2021
           </div>
           <div className="ml-auto mr-4 pl-4">
@@ -190,7 +193,7 @@ const CV: React.FC = () => {
               }}
             />
           </div>
-        </StyledGrid>
+        </div>
         <div className={`${expandedList.includes(Sections.DabApps) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
             <li>
@@ -218,8 +221,8 @@ const CV: React.FC = () => {
         </div>
 
 
-        <StyledGrid className=" items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="px-6 py-2 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
+        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+          <div className="basis-32 px-6 py-2 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
             <Image
               src={'/ICL.png'}
               alt="imperial-college-london"
@@ -227,11 +230,11 @@ const CV: React.FC = () => {
               height='120'
             />
           </div>
-          <div className="text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold w-275">
+          <div className="basis-72 text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             BSc Physics
           </div>
 
-          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap grow-0">
+          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap">
             2014 - 2018
           </div>
           <div className="ml-auto mr-4 pl-4">
@@ -242,7 +245,7 @@ const CV: React.FC = () => {
               }
             />
           </div>
-        </StyledGrid>
+        </div>
         <div className={`${expandedList.includes(Sections.Physics) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
             <li className="mt-2">Courses included <i>Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and Magnetism, Relativity, Fourier Analysis, Light and Matter and more</i>
