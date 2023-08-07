@@ -44,9 +44,9 @@ export default async function Post({ params }: { params: { postId: string } }) {
     <main className='px-6 dark:bg-black bg-white min-h-screen flex flex-col text-black dark:text-white'>
       <h1 className='text-3xl mt-4 mb-0'>{title}</h1>
       <p className='mt-0'>{pubDate}</p>
-      <article>
+      <article className='text-justify'>
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        <p className='className="font-body inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 text-xs leading-normal"'>
+        <p className='className="font-body m-4 inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 leading-normal"'>
           <Link href="/">Back to home</Link>
         </p>
       </article>
