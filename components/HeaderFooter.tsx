@@ -29,14 +29,13 @@ export default function HeaderFooter({
     <div className="flex min-h-screen flex-col">
       <nav className='flex flex-row pb-4 pt-4 bg-gradient-to-r from-sky-600 to-sky-800 dark:from-another-blue dark:to-sky-800'>
         <Link href="/" className={`ml-8 text-3xl text-white dark:text-almost-black font-bold self-center`}>Tessa Breen</Link>
-        <div className='flex ml-auto space-x-8 mr-8 items-center'>
+        <div className='flex ml-auto lg:space-x-8 space-x-2 mr-2 lg:mr-8 items-center'>
           <LinkedinLogo
             alt="linkedin"
             width='35'
             height='35'
             color={isDarkTheme ? 'black' : 'white'}
             onClick={() => openInNewTab('https://linkedin.com/in/tessabreen')}
-            className="ml-4"
           />
           <GithubLogo
             alt="github"

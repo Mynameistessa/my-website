@@ -7,7 +7,7 @@ const Intro = () => {
     <div className="grid mb-16">
       <div className='sm:grid lg:flex'>
         <div>
-          <div className="overflow-hidden bg-no-repeat bg-cover px-4 sm:mb-4">
+          <div className="overflow-hidden bg-no-repeat bg-cover px-4 mb-4">
             <Image
               src="/me.jpg"
               className="rounded-lg"
@@ -20,7 +20,7 @@ const Intro = () => {
             </figcaption>
           </div>
         </div>
-        <div className='dark:text-white text-almost-black max-w-s text-left leading-loose text-lg'>
+        <div className='dark:text-white text-almost-black max-w-s lg:text-left leading-loose text-lg text-justify'>
           <h2 className='text-2xl mb-4 font-bold'>Hello!</h2>
           <p className='text-base'>
             I&apos;m a Front-End Software Engineer at {' '}
@@ -30,15 +30,15 @@ const Intro = () => {
               </span>
             </a>
             {' '} building an in-house continuous integration system for internal developers.
-            <p className='font-body'>I enjoy solving problems and working with great people along the way.</p>
+            {/* <p className='font-body'>I enjoy solving problems and working with great people along the way.</p> */}
             <div className='mt-4'>
               <p>In my spare time I take part in hackathons. I also like to draw portraits, make music and get out amongst nature.</p>
             </div>
             <div className='mt-4'>
-              <p>Check out my blog for my latest posts where I talk about recent topics I&apos;ve studied in software development and whatever I find interesting.</p>
+              <p>Check out my blogposts below where I talk about recent topics I&apos;ve studied in software development and whatever I find interesting.</p>
               <br />
               <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="group transition-all duration-300 ease-in-out flex items-center">
-                <span className=' bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
+                <span className='bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
                   Goodreads
                 </span>
                 <ArrowSquareOut size={20} color={'#FDA769'} className='ml-2' />

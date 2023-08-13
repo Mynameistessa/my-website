@@ -43,7 +43,8 @@ module.exports = {
         'neutral-900': '#171717',
         'slate-800': '#1e293b',
         'light-pink': '#FCC8D1',
-        'another-blue': '#0079FF'
+        'another-blue': '#0079FF',
+        'test': '#03001C'
       }
     },
   },
