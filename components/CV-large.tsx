@@ -86,10 +86,10 @@ const CVLarge: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="text-m basis-72 dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+          <div className="text-m basis-72 dark:text-brick-red text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             Front-End Software Engineer
           </div>
-          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap basis-5">
+          <div className="text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5">
             2022 - <i>Present</i>
           </div>
           <div className="ml-auto mr-4 pl-4">
@@ -124,10 +124,10 @@ const CVLarge: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="text-m basis-72 dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+          <div className="text-m basis-72 dark:text-brick-red text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
-          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap basis-5">
+          <div className="text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5">
             2020 - 2022
           </div>
           <div className="ml-auto mr-4 pl-4">
@@ -169,11 +169,11 @@ const CVLarge: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="text-m basis-72 dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+          <div className="text-m basis-72 dark:text-brick-red text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
 
-          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap basis-5">
+          <div className="text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5">
             2020 - 2021
           </div>
           <div className="ml-auto mr-4 pl-4">
@@ -221,10 +221,10 @@ const CVLarge: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="basis-72 text-m dark:text-white text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+          <div className="basis-72 text-m dark:text-brick-red text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
             BSc Physics
           </div>
-          <div className="text-m dark:text-white text-neutral-900 whitespace-nowrap basis-5">
+          <div className="text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5">
             2014 - 2018
           </div>
           <div className="ml-auto mr-4 pl-4">

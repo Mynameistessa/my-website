@@ -78,10 +78,10 @@ const CV: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="text-sm basis-72 dark:text-white text-neutral-900  py-4 whitespace-nowrap font-bold">
+          <div className="text-sm basis-72 dark:text-brick-red text-neutral-900  py-4 whitespace-nowrap font-bold">
             Front-End Software Engineer
           </div>
-          <div className="text-sm dark:text-white text-neutral-900 whitespace-nowrap ">
+          <div className="text-sm dark:text-platinum-grey text-neutral-900 whitespace-nowrap ">
             22-<i>Present</i>
           </div>
         </div>
@@ -149,11 +149,11 @@ const CV: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="text-sm basis-72 dark:text-white text-neutral-900  py-4 whitespace-nowrap font-bold">
+          <div className="text-sm basis-72 dark:text-brick-red text-neutral-900  py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
 
-          <div className="text-sm dark:text-white text-neutral-900 whitespace-nowrap">
+          <div className="text-sm dark:text-platinum-grey text-neutral-900 whitespace-nowrap">
             20-21
           </div>
         </div>
@@ -194,11 +194,11 @@ const CV: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="basis-72 text-sm dark:text-white text-neutral-900  py-4 whitespace-nowrap font-bold">
+          <div className="basis-72 text-sm dark:text-brick-red text-neutral-900  py-4 whitespace-nowrap font-bold">
             BSc Physics
           </div>
 
-          <div className="text-sm dark:text-white text-neutral-900 whitespace-nowrap">
+          <div className="text-sm dark:text-platinum-grey text-neutral-900 whitespace-nowrap">
             14-18
           </div>
         </div>
