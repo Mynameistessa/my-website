@@ -26,36 +26,36 @@ export default function HeaderFooter({
   const isDarkTheme = Boolean(theme === 'dark');
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <nav className='flex flex-row pb-4 pt-4 bg-gradient-to-r from-sky-600 to-sky-800 dark:from-another-blue dark:to-sky-800'>
-        <Link href="/" className={`ml-8 text-3xl text-white dark:text-almost-black font-bold self-center`}>Tessa Breen</Link>
+    <div className="flex min-h-screen flex-col bg-white dark:bg-sky-900">
+      <nav className='sticky top-0 backdrop-blur-md flex flex-row pb-4 pt-4 bg-transparent border-almost-black border-b-2 dark:border-warm-yellow'>
+        <Link href="/" className={`ml-8 text-3xl text-almost-black dark:text-white font-bold self-center`}>Tessa Breen</Link>
         <div className='flex ml-auto lg:space-x-8 space-x-2 mr-2 lg:mr-8 items-center'>
           <LinkedinLogo
             alt="linkedin"
             width='35'
             height='35'
-            color={isDarkTheme ? 'black' : 'white'}
+            color={!isDarkTheme ? 'black' : 'white'}
             onClick={() => openInNewTab('https://linkedin.com/in/tessabreen')}
           />
           <GithubLogo
             alt="github"
             size={32}
-            color={isDarkTheme ? 'black' : 'white'}
-            fill={isDarkTheme ? 'black' : 'white'}
+            color={!isDarkTheme ? 'black' : 'white'}
+            fill={!isDarkTheme ? 'black' : 'white'}
             onClick={() => openInNewTab('https://github.com/Mynameistessa')}
           />
           <TwitterLogo
             alt="twitter"
             size={32}
-            color={isDarkTheme ? 'black' : 'white'}
+            color={!isDarkTheme ? 'black' : 'white'}
             onClick={() => openInNewTab('https://twitter.com/mynameistessa3')}
           />
           <ThemeButton />
         </div>
       </nav>
       {children}
-      <footer className="text-center lg:text-left mt-auto border-t dark:border-almost-black border-almost-black border-dotted bg-gradient-to-r from-sky-600 to-sky-800 dark:from-another-blue dark:to-sky-800">
-        <div className="text-white dark:text-almost-black text-center p-4" >
+      <footer className="text-center lg:text-left mt-auto border-t dark:border-almost-black border-almost-black border-dotted bg-gradient-to-r bg-sky-900">
+        <div className="text-white text-center p-4" >
           Copyright © 2023 Tessa Breen | Next.js {packageJson.dependencies.next} & Tailwind Elements
         </div>
       </footer>

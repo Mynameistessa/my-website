@@ -4,7 +4,7 @@ import Intro from '@/components/Intro';
 
 export default function Home() {
   return (
-    <main className="min-h-screen justify-between lg:p-20 p-4 dark:bg-test bg-white">
+    <main className="min-h-screen justify-between lg:p-20 p-4 dark:bg-test bg-seablue">
       <Intro />
       <Posts />
       <CV />

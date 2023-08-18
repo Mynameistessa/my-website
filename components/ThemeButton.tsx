@@ -17,7 +17,7 @@ const ThemeButton = () => {
     <Moon
       className="self-center"
       size={32}
-      color={isDarkTheme ? '#000' : 'white'}
+      color={!isDarkTheme ? '#000' : 'white'}
       onClick={() => {
         setTheme(isDarkTheme ? 'light' : 'dark')
       }}
