@@ -35,6 +35,7 @@ const CVLarge: React.FC = () => {
   }
 
   const updateListOnExpandCollapse = (itemToAddRemove: string) => {
+    console.log(itemToAddRemove, 'item to add remove')
     if (expandedList.includes(itemToAddRemove)) {
       return setExpandedList(expandedList.filter(item => item !== itemToAddRemove, itemToAddRemove))
     } else {
@@ -76,26 +77,21 @@ const CVLarge: React.FC = () => {
       </div>
 
       <div className="flex flex-col mt-8">
-        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="basis-32 px-6 py-2 whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
+        <div onClick={() => updateListOnExpandCollapse(Sections.Unity)} className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+          <div className="basis-32 sm:px-6 py-2 whitespace-nowrap sm:text-m font-medium dark:text-white text-neutral-900">
             <Image
-              src={isDarkTheme ? '/unity-white.png' : '/Unity.png'}
+              src={isDarkTheme ? '/unity-white.png' : '/unity-black.png'}
               alt="unity-technologies"
               width='80'
               height='80'
               className='max-w-none'
             />
           </div>
-          <div className="text-m basis-72 dark:text-brick-red text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+          <div className="sm:text-m basis-72 dark:text-brick-red text-neutral-900 sm:px-6 sm:py-4 whitespace-nowrap font-bold">
             Front-End Software Engineer
           </div>
-          <div className="text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5">
+          <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5 ml-auto mr-8">
             2022 - <i>Present</i>
-          </div>
-          <div className="ml-auto mr-4 pl-4">
-            <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
-              onClick={() => updateListOnExpandCollapse(Sections.Unity)}
-            />
           </div>
         </div>
         <div className={`${expandedList.includes(Sections.Unity) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
@@ -114,8 +110,10 @@ const CVLarge: React.FC = () => {
         </div>
 
 
-        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="basis-32 px-6 py-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
+        <div onClick={() => {
+          updateListOnExpandCollapse(Sections.BBC);
+        }} className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+          <div className="basis-32 sm:px-6 py-2 whitespace-nowrap sm:text-m font-medium dark:text-white text-neutral-900">
             <Image
               src={theme === 'dark' ? '/whitebbcblocks.svg.png' : '/newBBC.png'}
               alt="bbc-logo"
@@ -124,18 +122,11 @@ const CVLarge: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="text-m basis-72 dark:text-brick-red text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+          <div className="sm:text-m basis-72 dark:text-brick-red text-neutral-900 sm:px-6 sm:py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
-          <div className="text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5">
+          <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5 ml-auto mr-8">
             2020 - 2022
-          </div>
-          <div className="ml-auto mr-4 pl-4">
-            <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
-              onClick={() => {
-                updateListOnExpandCollapse(Sections.BBC);
-              }}
-            />
           </div>
         </div>
         <div className={`${expandedList.includes(Sections.BBC) ? '' : 'hidden'} dark:text-white text-neutral-900 mb-4 px-8 py-4`}>
@@ -159,29 +150,24 @@ const CVLarge: React.FC = () => {
         </div>
 
 
-        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="basis-32 px-6 py-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
+        <div onClick={() => {
+          updateListOnExpandCollapse(Sections.DabApps);
+        }} className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+          <div className="basis-32 sm:px-6 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
             <Image
               src={'/dabapps.png'}
               alt="dabapps"
-              width='80'
-              height='80'
+              width='75'
+              height='75'
               className='max-w-none'
             />
           </div>
-          <div className="text-m basis-72 dark:text-brick-red text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+          <div className="sm:text-m basis-72 dark:text-brick-red text-neutral-900 sm:px-6 sm:py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
 
-          <div className="text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5">
+          <div className="sm:visible sm:text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap sm:basis-5 ml-auto sm:mr-8">
             2020 - 2021
-          </div>
-          <div className="ml-auto mr-4 pl-4">
-            <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
-              onClick={() => {
-                updateListOnExpandCollapse(Sections.DabApps);
-              }}
-            />
           </div>
         </div>
         <div className={`${expandedList.includes(Sections.DabApps) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
@@ -196,7 +182,7 @@ const CVLarge: React.FC = () => {
                   <i>Xperta: </i>Building a messaging app to connect legal professionals with expert witnesses
                 </li>
                 <li>
-                  <i>Peoplewise: </i>Award-winning assessment and development programme built to be used by employers
+                  <i>Peoplewise: </i>Award-winning assessment and development programme built used by employers
                 </li>
               </ol>
             </li>
@@ -211,8 +197,10 @@ const CVLarge: React.FC = () => {
         </div>
 
 
-        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="basis-32 px-6 py-2 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
+        <div onClick={() => {
+          updateListOnExpandCollapse(Sections.Physics);
+        }} className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+          <div className="basis-32 sm:px-6 py-2 whitespace-nowrap sm:text-lg font-medium dark:text-white text-neutral-900">
             <Image
               src={'/ICL.png'}
               alt="imperial-college-london"
@@ -221,22 +209,14 @@ const CVLarge: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="basis-72 text-m dark:text-brick-red text-neutral-900 px-6 py-4 whitespace-nowrap font-bold">
+          <div className="basis-72 text-m dark:text-brick-red text-neutral-900 sm:px-6 sm:py-4 whitespace-nowrap font-bold">
             BSc Physics
           </div>
-          <div className="text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5">
+          <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5 ml-auto mr-8">
             2014 - 2018
           </div>
-          <div className="ml-auto mr-4 pl-4">
-            <CaretDown size={32} color={isDarkTheme ? 'white' : 'black'}
-              onClick={() => {
-                updateListOnExpandCollapse(Sections.Physics);
-              }
-              }
-            />
-          </div>
         </div>
-        <div className={`${expandedList.includes(Sections.Physics) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
+        <div className={`${expandedList.includes(Sections.Physics) ? '' : 'hidden'} dark:text-white text-neutral-900 sm:px-8 sm:py-4 sm:text-m max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
             <li className="mt-2">Courses included <i>Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and Magnetism, Relativity, Fourier Analysis, Light and Matter and more</i>
             </li>

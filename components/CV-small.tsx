@@ -69,19 +69,19 @@ const CV: React.FC = () => {
 
       <div className="flex flex-col mt-8">
         <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="lg:basis-32 mr-2  whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
+          <div className="mr-2 whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
             <Image
-              src={isDarkTheme ? '/unity-white.png' : '/Unity.png'}
+              src={isDarkTheme ? '/unity-white.png' : '/unity-black.png'}
               alt="unity-technologies"
-              width='70'
-              height='70'
+              width='60'
+              height='60'
               className='max-w-none'
             />
           </div>
-          <div className="text-sm basis-72 dark:text-brick-red text-neutral-900  py-4 whitespace-nowrap font-bold">
+          <div className="text-sm mr-2 dark:text-brick-red text-neutral-900 py-4 whitespace-nowrap font-bold">
             Front-End Software Engineer
           </div>
-          <div className="text-sm dark:text-platinum-grey text-neutral-900 whitespace-nowrap ">
+          <div className="text-sm ml-auto dark:text-platinum-grey text-neutral-900 whitespace-nowrap ">
             22-<i>Present</i>
           </div>
         </div>
@@ -102,19 +102,19 @@ const CV: React.FC = () => {
 
 
         <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="lg:basis-32 mr-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
+          <div className="mr-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
             <Image
               src={theme === 'dark' ? '/whitebbcblocks.svg.png' : '/newBBC.png'}
               alt="bbc-logo"
-              width='70'
-              height='70'
+              width='50'
+              height='50'
               className='max-w-none'
             />
           </div>
-          <div className="text-sm basis-72 dark:text-white text-neutral-900  py-4 whitespace-nowrap font-bold">
+          <div className="text-sm mr-2 dark:text-white text-neutral-900  py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
-          <div className="text-sm dark:text-white text-neutral-900 whitespace-nowrap ">
+          <div className="text-sm ml-auto dark:text-white text-neutral-900 whitespace-nowrap ">
             20-22
           </div>
         </div>
@@ -140,20 +140,20 @@ const CV: React.FC = () => {
 
 
         <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="lg:basis-32 mr-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
+          <div className="mr-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
             <Image
               src={'/dabapps.png'}
               alt="dabapps"
-              width='70'
-              height='70'
+              width='50'
+              height='50'
               className='max-w-none'
             />
           </div>
-          <div className="text-sm basis-72 dark:text-brick-red text-neutral-900  py-4 whitespace-nowrap font-bold">
+          <div className="text-sm mr-2 dark:text-brick-red text-neutral-900  py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
 
-          <div className="text-sm dark:text-platinum-grey text-neutral-900 whitespace-nowrap">
+          <div className="text-sm ml-auto dark:text-platinum-grey text-neutral-900 whitespace-nowrap">
             20-21
           </div>
         </div>
@@ -185,20 +185,20 @@ const CV: React.FC = () => {
 
 
         <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-          <div className="lg:basis-32 mr-2 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
+          <div className="mr-2 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
             <Image
               src={'/ICL.png'}
               alt="imperial-college-london"
-              width='80'
-              height='80'
+              width='85'
+              height='85'
               className='max-w-none'
             />
           </div>
-          <div className="basis-72 text-sm dark:text-brick-red text-neutral-900  py-4 whitespace-nowrap font-bold">
+          <div className="mr-2 text-sm dark:text-brick-red text-neutral-900  py-4 whitespace-nowrap font-bold">
             BSc Physics
           </div>
 
-          <div className="text-sm dark:text-platinum-grey text-neutral-900 whitespace-nowrap">
+          <div className="text-sm ml-auto dark:text-platinum-grey text-neutral-900 whitespace-nowrap">
             14-18
           </div>
         </div>

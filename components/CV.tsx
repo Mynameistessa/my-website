@@ -24,27 +24,31 @@ enum Sections {
 }
 
 const CV: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null;
+  const [dimensions, setDimensions] = React.useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  console.log(dimensions);
+  const handleResize = () => {
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
   }
+  useEffect(() => {
+    window.addEventListener("resize", handleResize, false);
 
-  let width = window.innerWidth;
+  }, []);
 
-  console.log(width, 'width?')
   return (
     <>
 
-      {width > 700 ? (
-        <CVLarge />
-      ) : (
-        <CVSmall />
-      )}
+      {dimensions.width > 600 ? (
+        <CVLarge />)
+        : (
+          <CVSmall />
+        )
+      }
     </>
   )
 }

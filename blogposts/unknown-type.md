@@ -7,7 +7,7 @@ date: '2023-04-14'
 Around 5 years ago from the date of this post the lead architect of Typescript, Anders Hjelsberg, opened a PR to add the ‘unknown’ type to Typescript v3. As of this post we are on v5 and in this post I want to dig into the practical benefits of its introduction to the type system. 
 &nbsp;  
 
-The Uknown type increases type safety within our project and can be seen as a type safe alternative to the any type.
+The Unknown type increases type safety within our project and can be seen as a type safe alternative to the any type.
 
 &nbsp;  
 ### **Theory**
@@ -45,18 +45,21 @@ There is a recommended way to narrow from unknown to a specific type. The recomm
 &nbsp;  
 
 This is why a variable of type unknown is only assignable to itself or any. This is also why the following principles hold:
+
 &nbsp;  
+* In an intersection everything absorbs unknown: T & unknown => T
 
-*In an intersection everything absorbs unknown: T & unknown => T
-*In a union unknown absorbs all other types: T | unknown => unknown *  
+* In a union unknown absorbs all other types: T | unknown => unknown *  
 
+&nbsp;  
 *except for any!  
 
 &nbsp;  
 The key principle to remember here is that we cannot read properties or assign it or perform operations on an unknown value before narrowing the type down first. 
   
 &nbsp; 
-## **Use Cases**
+##  **Use Cases**
+
 &nbsp;  
 * ### **Migrating From JS to Typescript**
 Perhaps in the past your team decided to migrate a Javascript project to Typescript. This can involve some guesswork if you’re working with a legacy codebase and the previous developers are either busy or have moved on. This was a situation I found myself in as a junior developer that had just been joined the project. It is tempting to make use of the `any` to get the project to compile and then gradually add the types in as you became more familiar with the codebase. However, this is where the unknown type can help. It would be type-safe to instead use the unknown type here and narrow the type down. This can also be a good way to deduce and learn the codebase. Whenever we use the type ‘any’ we are basically turning the compiler off. We are no longer getting any feedback which means that we can use operations meant for strings on variables of type number without generating any errors. This defeats the purpose of using Typescript!
@@ -67,6 +70,8 @@ If we are working with a logging system, or reading from an API that we cannot r
  
 Another typical example is when you are reading from localStorage or any API where json is being deserialised. We can set the response to unknown and then handle the case for each type separately, ensuring type safety. 
 
+&nbsp;  
+---
 &nbsp;  
 ### **Sources**
 
