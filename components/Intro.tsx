@@ -32,7 +32,7 @@ const Intro = () => {
             {' '} building an in-house continuous integration system for internal developers.
             {/* <p className='font-body'>I enjoy solving problems and working with great people along the way.</p> */}
             <div className='mt-4'>
-              <p>In my spare time I take part in hackathons. I also like to draw portraits, make music and get out amongst nature.</p>
+              <p>In my spare time I take part in Hackathons. I also like to draw portraits, make music and get out amongst nature.</p>
             </div>
             <div className='mt-4'>
               <p>Check out my blogposts below where I talk about recent topics I&apos;ve studied in software development and whatever I find interesting.</p>

@@ -59,7 +59,7 @@ The key principle to remember here is that we cannot read properties or assign i
 ## **Use Cases**
 &nbsp;  
 * ### **Migrating From JS to Typescript**
-Perhaps in the past your team decided to migrate a Javascript project to Typescript. This can involve some guesswork if you’re working with a legacy codebase and the previous developers are either busy or have moved on. This was a situation I found myself in as a junior developer that had just been onboarded. It is tempting to make use of the `any` to get the project to compile and then gradually add the types in as you became more familiar with the codebase. However, this is where the unknown type can help. It would be typesafe to instead use the unknown type here and narrow the type down. This can also be a good way to deduce and learn the codebase. Whenever we use the type ‘any’ we are basically turning the compiler off. We are no longer getting any feedback which means that we can use operations meant for strings on variables of type number without generating any errors. This defeats the purpose of using Typescript!
+Perhaps in the past your team decided to migrate a Javascript project to Typescript. This can involve some guesswork if you’re working with a legacy codebase and the previous developers are either busy or have moved on. This was a situation I found myself in as a junior developer that had just been joined the project. It is tempting to make use of the `any` to get the project to compile and then gradually add the types in as you became more familiar with the codebase. However, this is where the unknown type can help. It would be type-safe to instead use the unknown type here and narrow the type down. This can also be a good way to deduce and learn the codebase. Whenever we use the type ‘any’ we are basically turning the compiler off. We are no longer getting any feedback which means that we can use operations meant for strings on variables of type number without generating any errors. This defeats the purpose of using Typescript!
 
 &nbsp;  
 ### **Reading from an external API**
@@ -68,28 +68,8 @@ If we are working with a logging system, or reading from an API that we cannot r
 Another typical example is when you are reading from localStorage or any API where json is being deserialised. We can set the response to unknown and then handle the case for each type separately, ensuring type safety. 
 
 &nbsp;  
-
-
-### **Common error message**
-Casting (as any as unknown?) is a common solution when encountering the following error: 
-
-> “Conversion of type 'X' to type 'Y' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.”
-
-This occurs when we use a type assertion with incompatible types.
-
-The solution to this is to first cast and widen the type to unknown and then to the type. This works because remember that all types are assignable to the ‘unknown’ type. 
-If the variable was already ox type x OR y, i.e. the union, then we can cast as x or y without this issue. The problem was due to the fact that we had narrows the type down, and yet wanted to cast as another type. 
-Solution
-
-Make sure you are comparing values of compatible types.
-To solve the error, declare any overlapping properties if they exist or use a type assertion.
-
-If we are confident then we do type assertion or we can make sure there is an overlap. We can edit the type to contain the properties for total overlap. 
-
-&nbsp;  
 ### **Sources**
-TODO: Give example
 
-[Source 1](https://bobbyhadz.com/blog/typescript-type-has-no-properties-in-common-with-type)
-[Source2](https://bobbyhadz.com/blog/typescript-conversion-of-type-to-type-may-be-mistake)
+* [https://bobbyhadz.com/blog/typescript-type-has-no-properties-in-common-with-type](https://bobbyhadz.com/blog/typescript-type-has-no-properties-in-common-with-type)
+* [https://bobbyhadz.com/blog/typescript-conversion-of-type-to-type-may-be-mistake](https://bobbyhadz.com/blog/typescript-conversion-of-type-to-type-may-be-mistake)
 

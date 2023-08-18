@@ -46,9 +46,9 @@ export default async function Post({ params }: { params: { postId: string } }) {
       <p className='mt-0'>{pubDate}</p>
       <article className='text-justify'>
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        <p className='className="font-body m-4 inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 leading-normal"'>
+        <div className='font-body m-4 inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 leading-normal float-right'>
           <Link href="/">Back to home</Link>
-        </p>
+        </div>
       </article>
     </main>
   )
