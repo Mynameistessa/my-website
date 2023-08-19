@@ -4,15 +4,14 @@ date: '2023-04-14'
 ---
 
 &nbsp;  
-Around 5 years ago from the date of this post the lead architect of Typescript, Anders Hjelsberg, opened a PR to add the ‘unknown’ type to Typescript v3. As of this post we are on v5 and in this post I want to dig into the practical benefits of its introduction to the type system. 
-&nbsp;  
+Around 5 years ago from the date of this post the lead architect of Typescript, Anders Hjelsberg, opened a PR to add the ‘unknown’ type to Typescript v3. As I'm writing this we are on v5 and in this post I want to dig into the practical benefits of its introduction to the type system. 
 
-The Unknown type increases type safety within our project and can be seen as a type safe alternative to the any type.
+&nbsp;  
+The Unknown type increases type safety within our project and can be seen as a type safe counterpart to the `any` type. This is because any allows you to perform any operation on a value without any type checking. Because of this the unknown type can  help us avoid errors such as *`TypeError: Cannot Read Property of Undefined.`*
 
 &nbsp;  
 ### **Theory**
-It can be helpful to think of the type system in terms of set theory. Both unknown and any can be described as *top types* or *universal supertypes*.  
-They are the outermost sets that encompass all other types. A type can be thought of as a set. The unknown set contains all possible values, and therefore we can have as members of this set the following:  
+It can be helpful to think of the type system in terms of set theory. Both unknown and any can be described as *top types* or *universal supertypes*. They are the outermost sets that encompass all other types. A type can be thought of as a set. The unknown set contains all possible values, and therefore we can have as members of this set the following:  
 
 &nbsp;   
 `x = 123;`
@@ -22,8 +21,10 @@ They are the outermost sets that encompass all other types. A type can be though
 `x = [1, 2, 3];`
 
 &nbsp;  
+This illustrates the principle that any variable is assignable to unknown, but unknown isn't assignable to anything but itself or any. And this defines it as an atomic type, i.e. it cannot be broken down. 
 
-There isn’t anything in the unknown set that allows you to perform all of the operations that exist. i.e. you cannot increment, or make a variable of type unknown upper case without first deducing the type.  
+&nbsp;  
+There isn’t anything in the unknown set that allows you to perform operations such as increment, or make a variable of type unknown upper case without first deducing the type. Everything assigned to type unknown will result in an error unless you assert or narrow the type down first.
 
 &nbsp; 
 
@@ -59,6 +60,7 @@ The key principle to remember here is that we cannot read properties or assign i
   
 &nbsp; 
 ##  **Use Cases**
+Below are common scenarios for where this type can be applied.
 
 &nbsp;  
 * ### **Migrating From JS to Typescript**
