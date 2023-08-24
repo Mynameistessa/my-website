@@ -1,18 +1,21 @@
 ---
 title: 'Typescript: The Unknown Type'
 date: '2023-04-14'
+readingTime: '5'
 ---
 
 &nbsp;  
-Around 5 years ago from the date of this post the lead architect of Typescript, Anders Hjelsberg, opened a PR to add the ‘unknown’ type to Typescript v3. As I'm writing this we are on v5 and in this post I want to dig into the practical benefits of its introduction to the type system. 
+In 2018, the ‘unknown’ type was introduced along with Typescript 3.0. In this post I want to dig into the practical benefits of its introduction to the type system. 
 
 &nbsp;  
-The Unknown type increases type safety within our project and can be seen as a type safe counterpart to the `any` type. This is because any allows you to perform any operation on a value without any type checking. Because of this the unknown type can  help us avoid errors such as *`TypeError: Cannot Read Property of Undefined.`*
+The Unknown type increases type safety within our project and can be seen as a type safe counterpart to the `any` type. This is because any allows you to perform any operation on a value without any type checking. Because of this the unknown type can  help us avoid errors at runtime such as *`TypeError: Cannot Read Property of Undefined.`*
 
 &nbsp;  
 ### **Theory**
-It can be helpful to think of the type system in terms of set theory. Both unknown and any can be described as *top types* or *universal supertypes*. They are the outermost sets that encompass all other types. A type can be thought of as a set. The unknown set contains all possible values, and therefore we can have as members of this set the following:  
+It can be helpful to think of the type system in terms of set theory, i.e. a type can be thought of as a set. Both unknown and any can be described as *top types* or *universal supertypes*. They are the outermost sets that encompass all other types.  The unknown set contains all possible values, and therefore we can have as members of this set the following:  
 
+&nbsp;  
+`let x: unknown;`
 &nbsp;   
 `x = 123;`
 &nbsp;  
@@ -21,15 +24,26 @@ It can be helpful to think of the type system in terms of set theory. Both unkno
 `x = [1, 2, 3];`
 
 &nbsp;  
-This illustrates the principle that any variable is assignable to unknown, but unknown isn't assignable to anything but itself or any. And this defines it as an atomic type, i.e. it cannot be broken down. 
+This illustrates the principle that any variable is assignable to unknown, but unknown isn't assignable to anything but itself or any without a type assertion or narrowing.  
+For union and intersection types the following principles hold: 
 
 &nbsp;  
-There isn’t anything in the unknown set that allows you to perform operations such as increment, or make a variable of type unknown upper case without first deducing the type. Everything assigned to type unknown will result in an error unless you assert or narrow the type down first.
+* In an intersection everything absorbs unknown: T & unknown => T
+
+* In a union unknown absorbs all other types: T | unknown => unknown *  
+
+&nbsp;  
+*except for any!  
+
+* unknown | any => any;
+
+&nbsp;  
+Unlike the any type, we cannot access properties on variables of the unknown type nor call or construct them. For example, consider x above, we cannot increment, or use the method toUpperCase without first deducing the type. Everything assigned to type unknown will result in an error unless you assert or narrow the type down first.
 
 &nbsp; 
 
 ### **Narrowing**
-There is a recommended way to narrow from unknown to a specific type. The recommendation is to use ‘typeof’ operator or ‘instanceof’ operator. You can also use keywords and cast such as ‘as unknown’ ‘as string’. This switches off the compiler. You are essentially telling it you know best and it will trust your judgement. This can result in runtime errors.  
+There is a recommended way to narrow from unknown to a specific type. The recommendation is to use ‘typeof’ operator or ‘instanceof’ operator. You can also use keywords and cast such as ‘as unknown’ ‘as string’. The latter switches off the compiler. You are essentially saying you know best and it will trust your judgement. This can result in a runtime error if you make a mistake and get the type wrong.  
 
 &nbsp;  
 
@@ -44,19 +58,7 @@ There is a recommended way to narrow from unknown to a specific type. The recomm
 `if (typeof example === 'number') example++;`  
 
 &nbsp;  
-
-This is why a variable of type unknown is only assignable to itself or any. This is also why the following principles hold:
-
-&nbsp;  
-* In an intersection everything absorbs unknown: T & unknown => T
-
-* In a union unknown absorbs all other types: T | unknown => unknown *  
-
-&nbsp;  
-*except for any!  
-
-&nbsp;  
-The key principle to remember here is that we cannot read properties or assign it or perform operations on an unknown value before narrowing the type down first. 
+The key principle to remember here is that we cannot read properties or assign it or perform operations on an unknown value before narrowing the type down first. While the any type is like an escape hatch out of the type system, the unknown type will force us to ensure type safety. 
   
 &nbsp; 
 ##  **Use Cases**
@@ -77,6 +79,8 @@ Another typical example is when you are reading from localStorage or any API whe
 &nbsp;  
 ### **Sources**
 
+* [https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html)
 * [https://bobbyhadz.com/blog/typescript-type-has-no-properties-in-common-with-type](https://bobbyhadz.com/blog/typescript-type-has-no-properties-in-common-with-type)
 * [https://bobbyhadz.com/blog/typescript-conversion-of-type-to-type-may-be-mistake](https://bobbyhadz.com/blog/typescript-conversion-of-type-to-type-may-be-mistake)
+* [https://mariusschulz.com/blog/the-unknown-type-in-typescript](https://mariusschulz.com/blog/the-unknown-type-in-typescript)
 

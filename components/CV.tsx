@@ -28,7 +28,6 @@ const CV: React.FC = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  console.log(dimensions);
   const handleResize = () => {
     setDimensions({
       width: window.innerWidth,
@@ -38,6 +37,9 @@ const CV: React.FC = () => {
   useEffect(() => {
     window.addEventListener("resize", handleResize, false);
 
+    () => {
+      window.removeEventListener("resize", handleResize, false)
+    }
   }, []);
 
   return (

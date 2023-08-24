@@ -44,7 +44,7 @@ module.exports = {
         'slate-800': '#1e293b',
         'light-pink': '#FCC8D1',
         'another-blue': '#0079FF',
-        'test': '#03001C'
+        'platinum-grey': '#888B8D'
       }
     },
     screens: {

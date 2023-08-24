@@ -21,10 +21,16 @@ export function getSortedPostsData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
+    const WORDS_PER_MINUTE = 200;
+    const regex = /\w+/g;
+    const wordCount = fileContents.match(regex)!.length;
+    const readingTime = Math.ceil(wordCount / WORDS_PER_MINUTE);
+
     const blogPost: BlogPost = {
       id,
       title: matterResult.data.title,
       date: matterResult.data.date,
+      readingTime: readingTime.toString()
     }
 
     // Combine the data with the id
@@ -56,6 +62,7 @@ export async function getPostData(id: string) {
     id,
     title: matterResult.data.title,
     date: matterResult.data.date,
+    readingTime: matterResult.data.readingTime,
     contentHtml
   }
 

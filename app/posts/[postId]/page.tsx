@@ -33,17 +33,17 @@ export default async function Post({ params }: { params: { postId: string } }) {
   const { postId } = params
 
   if (!posts.find(post => post.id === postId)) {
-    notFound() // could also be our custom 404 
+    notFound()
   }
 
-  const { title, date, contentHtml } = await getPostData(postId)
+  const { title, date, contentHtml, readingTime } = await getPostData(postId)
 
   const pubDate = getFormattedDate(date)
 
   return (
     <main className='px-6 dark:bg-black bg-seablue min-h-screen flex flex-col text-black dark:text-white'>
       <h1 className='text-3xl mt-4 mb-0'>{title}</h1>
-      <p className='mt-0'>{pubDate}</p>
+      <p className='mt-0'>{pubDate} - {readingTime} minute read</p>
       <article className='text-justify text-sm md:text-base'>
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <div className='font-body m-4 inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 leading-normal float-right'>

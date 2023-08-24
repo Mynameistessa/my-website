@@ -90,7 +90,7 @@ const CVLarge: React.FC = () => {
           <div className="sm:text-m basis-72 dark:text-brick-red text-neutral-900 sm:px-6 sm:py-4 whitespace-nowrap font-bold">
             Front-End Software Engineer
           </div>
-          <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5 ml-auto mr-8">
+          <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5 ml-auto lg:mr-8">
             2022 - <i>Present</i>
           </div>
         </div>
@@ -105,7 +105,8 @@ const CVLarge: React.FC = () => {
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-violet-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux Toolkit</span>
-            <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
+            <span className="text-white inline-block whitespace-nowrap rounded-full bg-ash-green px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Github Actions</span>
+            <span className="text-white inline-block whitespace-nowrap rounded-full bg-platinum-grey px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
           </div>
         </div>
 
@@ -125,7 +126,7 @@ const CVLarge: React.FC = () => {
           <div className="sm:text-m basis-72 dark:text-brick-red text-neutral-900 sm:px-6 sm:py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
-          <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5 ml-auto mr-8">
+          <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5 ml-auto lg:mr-8">
             2020 - 2022
           </div>
         </div>
@@ -143,7 +144,7 @@ const CVLarge: React.FC = () => {
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
-            <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
+            <span className="text-white inline-block whitespace-nowrap rounded-full bg-platinum-grey px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-peach-orange px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">AWS</span>
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-brick-red px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Scala</span>
           </div>
@@ -166,7 +167,7 @@ const CVLarge: React.FC = () => {
             Full-Stack Software Engineer
           </div>
 
-          <div className="sm:visible sm:text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap sm:basis-5 ml-auto sm:mr-8">
+          <div className="sm:visible sm:text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap sm:basis-5 ml-auto lg:mr-8">
             2020 - 2021
           </div>
         </div>
@@ -191,7 +192,7 @@ const CVLarge: React.FC = () => {
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Typescript</span>
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-600 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">React</span>
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-lavendar px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Redux</span>
-            <span className="text-white inline-block whitespace-nowrap rounded-full bg-almost-black px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
+            <span className="text-white inline-block whitespace-nowrap rounded-full bg-platinum-grey px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Node</span>
             <span className="text-white inline-block whitespace-nowrap rounded-full bg-green-700 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">Django</span>
           </div>
         </div>
@@ -212,7 +213,7 @@ const CVLarge: React.FC = () => {
           <div className="basis-72 text-m dark:text-brick-red text-neutral-900 sm:px-6 sm:py-4 whitespace-nowrap font-bold">
             BSc Physics
           </div>
-          <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5 ml-auto mr-8">
+          <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap basis-5 ml-auto lg:mr-8">
             2014 - 2018
           </div>
         </div>
@@ -228,7 +229,6 @@ const CVLarge: React.FC = () => {
                   with Imperial Enterprise Lab in which I designed a prototype of a device to be fitted to buildings to
                   remove local air pollutants and ultimately competed pitched to judges for funding
                 </li>
-                {/* <li>Business Horizons course</li> */}
                 <li>Enrolled in a course titled <i>Conflict, Crime and Justice</i> and achieved first-class for essays on globalisation and the problems regarding the use of genetics in the court room </li>
               </ol>
             </li>

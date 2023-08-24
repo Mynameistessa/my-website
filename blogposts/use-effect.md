@@ -1,6 +1,7 @@
 ---
 title: 'Pitfalls of useEffect'
 date: '2023-08-11'
+readingTime: '6'
 ---
 
 

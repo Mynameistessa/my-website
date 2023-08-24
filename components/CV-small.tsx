@@ -1,46 +1,11 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
-import styled from 'styled-components';
-import { CaretDown } from 'phosphor-react';
-
-enum Sections {
-  Unity = "unity",
-  BBC = "bbc",
-  DabApps = "dabapps",
-  Physics = "physics",
-}
 
 const CV: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [showExpandAll, setShowExpandAll] = useState(false);
-  const [expandedList, setExpandedList] = useState<Array<string>>([Sections.Unity]);
-  const totalSections = 4
-
-  const areAllExpandedAndSetAllExpandedOrCollapsed = () => {
-    if (expandedList.length === totalSections) {
-      setExpandedList([])
-      return setShowExpandAll(false)
-    }
-    if (expandedList.length === 0) {
-      setExpandedList(['unity', 'physics', 'bbc', 'dabapps'])
-      return setShowExpandAll(true);
-    }
-    if (expandedList.length !== 0) {
-      setExpandedList([])
-      return setShowExpandAll(false)
-    }
-  }
-
-  const updateListOnExpandCollapse = (itemToAddRemove: string) => {
-    if (expandedList.includes(itemToAddRemove)) {
-      return setExpandedList(expandedList.filter(item => item !== itemToAddRemove, itemToAddRemove))
-    } else {
-      setExpandedList(expandedList.concat(itemToAddRemove));
-    }
-  }
 
   const isDarkTheme = theme === 'dark';
 
@@ -114,7 +79,7 @@ const CV: React.FC = () => {
           <div className="text-sm mr-2 dark:text-white text-neutral-900  py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
-          <div className="text-sm ml-auto dark:text-white text-neutral-900 whitespace-nowrap ">
+          <div className="text-sm ml-auto dark:text-platinum-grey text-neutral-900 whitespace-nowrap ">
             20-22
           </div>
         </div>
@@ -214,7 +179,6 @@ const CV: React.FC = () => {
                   with Imperial Enterprise Lab in which I designed a prototype of a device to be fitted to buildings to
                   remove local air pollutants and ultimately competed pitched to judges for funding
                 </li>
-                {/* <li>Business Horizons course</li> */}
                 <li>Enrolled in a course titled <i>Conflict, Crime and Justice</i> and achieved first-class for essays on globalisation and the problems regarding the use of genetics in the court room </li>
               </ol>
             </li>
