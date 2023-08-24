@@ -73,8 +73,7 @@ Before using this hook consider if this is the best way to achieve what you want
 
 &nbsp;  
 
->	“If your app is a story, can you tell it in pieces, or you want your users to see
-the story in full right away, without any intermediate steps?”
+>	*“If your app is a story, can you tell it in pieces, or you want your users to see the story in full right away, without any intermediate steps?”*
 
 &nbsp;  
 ### **Final notes**
