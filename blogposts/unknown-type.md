@@ -5,10 +5,10 @@ readingTime: '5'
 ---
 
 &nbsp;  
-In 2018, the ‘unknown’ type was introduced along with Typescript 3.0. In this post I want to dig into the practical benefits of its introduction to the type system. 
+In 2018, the unknown type was introduced along with Typescript 3.0. In this post I want to dig into the practical benefits of its introduction to the type system. 
 
 &nbsp;  
-The Unknown type increases type safety within our project and can be seen as a type safe counterpart to the `any` type. This is because any allows you to perform any operation on a value without any type checking. Because of this the unknown type can  help us avoid errors at runtime such as *`TypeError: Cannot Read Property of Undefined.`*
+The unknown type increases type safety within our project and can be seen as a type safe counterpart to the `any` type. This is because any allows you to perform any operation on a value without any type checking. Because of this it can help us avoid errors at runtime such as *`TypeError: Cannot Read Property of Undefined.`*
 
 &nbsp;  
 ### **Theory**

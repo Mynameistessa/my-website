@@ -6,7 +6,7 @@ readingTime: '6'
 
 
 &nbsp;  
-The useEffect Hook provided by React lets you synchronise with external system. It executes after render and every time the component renders again if a dependency array is not set. It is also important to note that it will be called twice if you are using [StrictMode](https://react.dev/reference/react/StrictMode) as a tool for unearthing nasty bugs earlier on in development. 
+The useEffect Hook provided by React lets you synchronise with an external system. It executes after render and every time the component renders again if a dependency array is not set. It is also important to note that it will be called twice if you are using [StrictMode](https://react.dev/reference/react/StrictMode) as a tool for unearthing nasty bugs earlier on in development. 
 
 &nbsp;  
 In addition to this, useEffect can return an optional clean-up function. This will run before our component unmounts and after the current effect and before executing the next effect during re-rendering. 
