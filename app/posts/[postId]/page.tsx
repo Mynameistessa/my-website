@@ -42,11 +42,11 @@ export default async function Post({ params }: { params: { postId: string } }) {
 
   return (
     <main className='px-6 dark:bg-black bg-seablue min-h-screen flex flex-col text-black dark:text-white'>
-      <h1 className='text-3xl mt-4 mb-0'>{title}</h1>
+      <h1 className='text-xl mt-4 mb-0'>{title}</h1>
       <p className='mt-0'>{pubDate} - {readingTime} minute read</p>
       <article className='text-justify text-sm md:text-base'>
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        <div className='font-body m-4 inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 leading-normal float-right'>
+        <div className='m-4 inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 leading-normal float-right'>
           <Link href="/">Back to home</Link>
         </div>
       </article>
