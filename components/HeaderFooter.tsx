@@ -48,7 +48,7 @@ export default function HeaderFooter({
             alt="twitter"
             size={32}
             color={!isDarkTheme ? 'black' : 'white'}
-            onClick={() => openInNewTab('https://twitter.com/mynameistessa3')}
+            onClick={() => openInNewTab('https://twitter.com/tessabreendev')}
           />
           <ThemeButton />
         </div>
