@@ -33,7 +33,7 @@ const CV: React.FC = () => {
       </div>
 
       <div className="flex flex-col mt-8">
-        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+        <div className="flex items-center border-b dark:border-platinum-grey border-wood dark:bg-slate-800 bg-warm-yellow p-2">
           <div className="mr-2 whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
             <Image
               src={isDarkTheme ? '/unity-white.png' : '/unity-black.png'}
@@ -66,7 +66,7 @@ const CV: React.FC = () => {
         </div>
 
 
-        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+        <div className="flex items-center border-b dark:border-platinum-grey border-wood dark:bg-slate-800 bg-warm-yellow p-2">
           <div className="mr-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
             <Image
               src={theme === 'dark' ? '/whitebbcblocks.svg.png' : '/newBBC.png'}
@@ -76,7 +76,7 @@ const CV: React.FC = () => {
               className='max-w-none'
             />
           </div>
-          <div className="text-sm mr-2 dark:text-white text-neutral-900  py-4 whitespace-nowrap font-bold">
+          <div className="text-sm mr-2 dark:text-brick-red text-neutral-900  py-4 whitespace-nowrap font-bold">
             Full-Stack Software Engineer
           </div>
           <div className="text-sm ml-auto dark:text-platinum-grey text-neutral-900 whitespace-nowrap ">
@@ -104,11 +104,11 @@ const CV: React.FC = () => {
         </div>
 
 
-        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+        <div className="flex items-center border-b dark:border-platinum-grey border-wood dark:bg-slate-800 bg-warm-yellow p-2">
           <div className="mr-2 whitespace-nowrap text-m font-medium dark:text-white text-neutral-900">
             <Image
               src={'/dabapps.png'}
-              alt="dabapps"
+              alt="dabapps logo"
               width='50'
               height='50'
               className='max-w-none'
@@ -149,7 +149,7 @@ const CV: React.FC = () => {
         </div>
 
 
-        <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+        <div className="flex items-center border-b dark:border-platinum-grey border-wood dark:bg-slate-800 bg-warm-yellow p-2">
           <div className="mr-2 whitespace-nowrap text-lg font-medium dark:text-white text-neutral-900">
             <Image
               src={'/ICL.png'}
@@ -169,7 +169,7 @@ const CV: React.FC = () => {
         </div>
         <div className={` dark:text-white text-neutral-900 px-8 py-4 lg:text-m text-sm max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
-            <li className="mt-2">Courses included <i>Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and Magnetism, Relativity, Fourier Analysis, Light and Matter and more</i>
+            <li className="mt-2">Courses included <i>Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and Magnetism, Relativity, Fourier Analysis and Light and Matter</i>
             </li>
             <li className="mt-2">Coursework included computing and laboratory modules where I used Python to model data and derive known relationships before writing a report summarising my findings</li>
             <li className="mt-2">Extracurricular Activities:

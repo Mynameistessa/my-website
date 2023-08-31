@@ -35,6 +35,7 @@ export default function HeaderFooter({
             width='35'
             height='35'
             color={!isDarkTheme ? 'black' : 'white'}
+            className="ml-2"
             onClick={() => openInNewTab('https://linkedin.com/in/tessabreen')}
           />
           <GithubLogo
