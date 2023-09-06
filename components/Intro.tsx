@@ -6,7 +6,7 @@ const Intro = () => {
   return <div className="flex z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex">
     <div className="grid mb-16">
       <div className=' lg:flex'>
-        <div className="overflow-hidden bg-no-repeat bg-cover px-4 mb-4">
+        <div className="overflow-hidden bg-no-repeat bg-cover px-4 mb-4 shrink-0">
           <Image
             src="/me.jpg"
             className="rounded-lg"

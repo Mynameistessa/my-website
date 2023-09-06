@@ -53,7 +53,7 @@ const CV: React.FC = () => {
         <div className={`dark:text-white text-neutral-900 px-8 py-4 lg:text-m text-sm max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
             <li>
-              Working on an internal continuous integration system for internal developers
+              Helping build a world-class, scalable infrastructure for continuous integration used by Unity developers
             </li>
           </ol>
           <div className="xs:invisible flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 mb-4">
