@@ -168,7 +168,7 @@ const CVLarge: React.FC = () => {
           </div>
 
           <div className="sm:visible sm:text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap sm:basis-5 ml-auto lg:mr-8">
-            2020 - 2021
+            2018 - 2021
           </div>
         </div>
         <div className={`${expandedList.includes(Sections.DabApps) ? '' : 'hidden'} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
@@ -219,14 +219,19 @@ const CVLarge: React.FC = () => {
         </div>
         <div className={`${expandedList.includes(Sections.Physics) ? '' : 'hidden'} dark:text-white text-neutral-900 sm:px-8 sm:py-4 sm:text-m max-w-200 break-words`}>
           <ol className="list-disc max-w-200 break-words">
-            <li className="mt-2">Courses included <i>Classical Mechanics, Environmental Physics, Fluid Dynamics, Quantum Mechanics, Electricity and Magnetism, Relativity, Fourier Analysis and Light and Matter</i>
+            <li className="mt-2">Courses included <i>Classical Mechanics, Environmental Physics,
+              Fluid Dynamics, Quantum Mechanics, Electricity and Magnetism, Relativity,
+              Fourier Analysis and Light and Matter</i>
             </li>
-            <li className="mt-2">Coursework included computing and laboratory modules where I used Python to model data and derive known relationships before writing a report summarising my findings</li>
+            <li className="mt-2">Coursework included computing and laboratory modules
+              where I used Python to model data and derive known relationships before writing a report summarising my findings</li>
             <li className="mt-2">Extracurricular Activities:
               <ol className="list-disc list-inside pl-5 mt-2 space-y-1 ">
                 <li>Finalist in the <i>Althea-Imperial programme </i>(now named <a className="underline" href="https://www.imperialenterpriselab.com/we-innovate/">WE Innovate</a>),
                   a 6-month long programme in association
-                  with Imperial Enterprise Lab in which I designed a prototype that removes air pollutants and pitched to judges for funding
+                  with Imperial Enterprise Lab in which I
+                  designed a prototype that removes air pollutants
+                  and pitched to judges for funding
                 </li>
                 <li>Enrolled in a course titled <i>Conflict, Crime and Justice</i> and achieved first-class for essays on globalisation and the problems regarding the use of genetics in the court room </li>
               </ol>

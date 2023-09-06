@@ -119,7 +119,7 @@ const CV: React.FC = () => {
           </div>
 
           <div className="text-sm ml-auto dark:text-platinum-grey text-neutral-900 whitespace-nowrap">
-            20-21
+            18-21
           </div>
         </div>
         <div className={` dark:text-white text-neutral-900 px-8 py-4 lg:text-m text-sm max-w-200 break-words`}>
@@ -176,8 +176,9 @@ const CV: React.FC = () => {
               <ol className="list-disc list-inside pl-5 mt-2 space-y-1 ">
                 <li>Finalist in the <i>Althea-Imperial programme </i>(now named <a className="underline" href="https://www.imperialenterpriselab.com/we-innovate/">WE Innovate</a>),
                   a 6-month long programme in association
-                  with Imperial Enterprise Lab in which I designed a prototype of a device to be fitted to buildings to
-                  remove local air pollutants and ultimately competed pitched to judges for funding
+                  with Imperial Enterprise Lab in which I
+                  designed a prototype that removes air pollutants
+                  and pitched to judges for funding
                 </li>
                 <li>Enrolled in a course titled <i>Conflict, Crime and Justice</i> and achieved first-class for essays on globalisation and the problems regarding the use of genetics in the court room </li>
               </ol>
