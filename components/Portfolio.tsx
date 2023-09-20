@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { CVRow } from "./CV-Card";
+import { CVRow } from "./Resume";
 
 const portfolio = [
   {
@@ -41,9 +41,7 @@ const portfolio = [
   },
 ]
 
-const CVLarge: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-
+export const CVLarge: React.FC = () => {
   return (
     <>
       <div className="flex flex-col cursor-pointer ml-auto">
@@ -68,7 +66,7 @@ const CVLarge: React.FC = () => {
 
       {portfolio.map((experience) => {
         return (
-          <CVRow company={experience.company} role={experience.role} duration={experience.duration}
+          <CVRow key={experience.duration} company={experience.company} role={experience.role} duration={experience.duration}
           />
         )
       })}
