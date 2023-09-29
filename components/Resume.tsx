@@ -1,8 +1,8 @@
 export const ExpandedCVRow = ({ company, role, duration, description, skills }:
   { company: string, role: string, duration: string, description: string[], skills: string[] }) => {
   return (
-    <div className="grid-cols-3">
-      <div className="flex items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+    <div>
+      <div className="grid grid-cols-3 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
         <div className="basis-32 sm:px-6 py-2 whitespace-nowrap sm:text-m font-medium dark:text-white text-neutral-900">
           {company}
         </div>
