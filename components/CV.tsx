@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import CVLarge from "./Portfolio";
+import CVLarge from "./CV-large";
 import CVSmall from "./CV-small";
 
 const CV: React.FC = () => {
@@ -23,15 +23,11 @@ const CV: React.FC = () => {
   }, []);
 
   return (
-    <>
-
-      {dimensions.width > 600 ? (
-        <CVLarge />)
-        : (
-          <CVSmall />
-        )
-      }
-    </>
+    dimensions.width > 600 ? (
+      <CVLarge />)
+      : (
+        <CVSmall />
+      )
   )
 }
 
