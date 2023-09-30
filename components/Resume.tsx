@@ -1,8 +1,11 @@
-export const ExpandedCVRow = ({ company, role, duration, description, skills }:
-  { company: string, role: string, duration: string, description: string[], skills: string[] }) => {
+// import { gsap } from "gsap";
+
+export const ExpandedCVRow = ({ company, role, duration, description, skills, index }:
+  { company: string, role: string, duration: string, description: string[], skills: string[], index: string }) => {
+
   return (
     <div>
-      <div className="grid grid-cols-3 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
+      <div className="selector grid grid-cols-3 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
         <div className="basis-32 sm:px-6 py-2 whitespace-nowrap sm:text-m font-medium dark:text-white text-neutral-900">
           {company}
         </div>
@@ -13,7 +16,7 @@ export const ExpandedCVRow = ({ company, role, duration, description, skills }:
           {duration}
         </div>
       </div>
-      <div className={`dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
+      <div className={`description-${index} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
         <ol className="list-disc max-w-200 break-words">
           {description.map((sentence) => (
             <li>
@@ -32,23 +35,6 @@ export const ExpandedCVRow = ({ company, role, duration, description, skills }:
     </div>
   )
 }
-
-export const CVRow = ({ company, role, duration }: { company: string, role: string, duration: string }) => {
-  return (
-    <div className="grid grid-cols-3 items-center border-b dark:border-platinum-grey border-wood hover:dark:bg-slate-800 hover:bg-warm-yellow">
-      <div className="sm:px-6 py-2 whitespace-nowrap sm:text-m font-medium dark:text-white text-neutral-900">
-        {company}
-      </div>
-      <div className="sm:text-m dark:text-brick-red text-neutral-900 sm:px-6 sm:py-4 whitespace-nowrap font-bold">
-        {role}
-      </div>
-      <div className="sm:visible text-m dark:text-platinum-grey text-neutral-900 whitespace-nowrap ml-auto lg:mr-8">
-        {duration}
-      </div>
-    </div>
-  )
-}
-
 
 export const CVSmallRow = ({ company, role, duration, description, skills }:
   { company: string, role: string, duration: string, description: string[], skills: string[] }) => {

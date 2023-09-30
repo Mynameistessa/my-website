@@ -1,7 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { CVRow, ExpandedCVRow } from "./Resume";
+import React from "react";
+import { ExpandedCVRow } from "./Resume";
 import { portfolio } from "./portfolio";
 
 export const CVLarge: React.FC = () => {
@@ -19,18 +18,14 @@ export const CVLarge: React.FC = () => {
               Download Resume
             </button>
           </a>
-          {/* <button className="inline-block text-white btn rounded bg-sky-600 hover:bg-sky-800 px-6 text-xs leading-normal"
-            onClick={() => {
-            }}>
-            Expand/Collapse All
-          </button> */}
         </div>
       </div>
 
-      {portfolio.map((experience) => {
+      {portfolio.map((experience, index) => {
         return (
-          // <CVRow key={experience.duration} company={experience.company} role={experience.role} duration={experience.duration}
-          <ExpandedCVRow key={experience.duration} company={experience.company} role={experience.role} duration={experience.duration} description={experience.description} skills={experience.skills} />
+          <ExpandedCVRow key={experience.duration} company={experience.company}
+            role={experience.role} duration={experience.duration}
+            description={experience.description} skills={experience.skills} index={index.toString()} />
         )
       })}
     </>
