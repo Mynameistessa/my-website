@@ -13,7 +13,7 @@ export const portfolio = [
   },
   {
     company: "DabApps", role: 'Full-stack Software Engineer', duration: '2018-2020',
-    description: [`Building web and mobile apps at an software development agency for business enterprises using Typescript, Javascript, Django and PostgreSQL`,
+    description: [`Building web and mobile apps at a software development agency for business enterprises using Typescript, Javascript, Django and PostgreSQL`,
       `Centurion: A mobile app written in React Native that controls a laboratory centrifuge`,
       `Xperta: Building a messaging app to connect legal professionals with expert witnesses`,
       `Peoplewise: Award-winning assessment and development programme built used by employers`

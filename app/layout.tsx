@@ -2,8 +2,6 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import ThemedLayoutComponent from '../components/themedLayoutComponent'
 
-// not a client component 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
