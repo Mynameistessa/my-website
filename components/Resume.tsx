@@ -40,18 +40,18 @@ export const CVSmallRow = ({ company, role, duration, description, skills }:
   { company: string, role: string, duration: string, description: string[], skills: string[] }) => {
   return (
     <>
-      <div className="grid grid-cols-3 items-center border-b dark:border-platinum-grey border-wood dark:bg-slate-800 bg-warm-yellow p-2">
-        <div className="mr-2 whitespace-nowrap text-sm font-medium dark:text-white text-neutral-900">
+      <div className="grid grid-cols-[1fr_1fr] items-center border-b dark:border-platinum-grey border-wood dark:bg-slate-800 bg-warm-yellow p-2">
+        <div className="mr-2 whitespace-nowrap text-sm dark:text-white text-neutral-900">
           {company}
         </div>
         <div className="text-sm mr-2 dark:text-brick-red text-neutral-900 py-4 whitespace-nowrap font-bold">
           {role}
         </div>
-        <div className="text-sm ml-auto dark:text-platinum-grey text-neutral-900 whitespace-nowrap ">
+      </div>
+      <div className={`dark:text-white text-neutral-900 px-8 py-2 lg:text-m text-sm max-w-200 break-words`}>
+        <div className="text-end py-2 ml-auto mr-0 text-sm dark:text-brick-red text-neutral-900 whitespace-nowrap italic">
           {duration}
         </div>
-      </div>
-      <div className={`dark:text-white text-neutral-900 px-8 py-4 lg:text-m text-sm max-w-200 break-words`}>
         <ol className="list-disc max-w-200 break-words">
           {description.map((sentence, index) => (
             <li key={index}>
