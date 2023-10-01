@@ -18,8 +18,8 @@ export const ExpandedCVRow = ({ company, role, duration, description, skills, in
       </div>
       <div className={`description-${index} dark:text-white text-neutral-900 px-8 py-4 text-m max-w-200 break-words`}>
         <ol className="list-disc max-w-200 break-words">
-          {description.map((sentence) => (
-            <li>
+          {description.map((sentence, index) => (
+            <li key={index}>
               {sentence}
             </li>
           ))}
@@ -53,15 +53,15 @@ export const CVSmallRow = ({ company, role, duration, description, skills }:
       </div>
       <div className={`dark:text-white text-neutral-900 px-8 py-4 lg:text-m text-sm max-w-200 break-words`}>
         <ol className="list-disc max-w-200 break-words">
-          {description.map((sentence) => (
-            <li>
+          {description.map((sentence, index) => (
+            <li key={index}>
               {sentence}
             </li>
           ))}
         </ol>
         <div className="xs:invisible flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 mb-4">
-          {skills.map((skill) => (
-            <span className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">{skill}</span>
+          {skills.map((skill, index) => (
+            <span key={index} className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none">{skill}</span>
           ))}
         </div>
       </div>

@@ -19,9 +19,10 @@ const CV: React.FC = () => {
         </a>
       </div>
       <div className="flex flex-col mt-8">
-        {portfolio.map((experience) => {
+        {portfolio.map((experience, index) => {
           return (
-            <CVSmallRow company={experience.company} role={experience.role} duration={experience.duration} description={experience.description} skills={experience.skills} />
+            <CVSmallRow company={experience.company} role={experience.role} duration={experience.duration}
+              description={experience.description} skills={experience.skills} key={index} />
           )
         })}
       </div>
