@@ -44,7 +44,7 @@ export const CVSmallRow = ({ company, role, duration, description, skills }:
         <div className="mr-2 whitespace-nowrap text-sm dark:text-white text-neutral-900">
           {company}
         </div>
-        <div className="w-full text-sm mr-2 dark:text-brick-red text-neutral-900 py-4 whitespace-nowrap font-bold">
+        <div className="text-sm mr-2 dark:text-brick-red text-neutral-900 py-4 whitespace-nowrap font-bold">
           {role}
         </div>
       </div>
