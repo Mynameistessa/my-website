@@ -9,7 +9,7 @@ export const portfolio = [
     description: [`Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS`,
       `Development of the content management system and rich-text editor
     used by over 6000 journalists worldwide to curate world-class BBC content, most notably publishing to the BBC News and BBC Sport site`],
-    skills: ['Typescript', 'React', 'Redux', 'Node', 'AWS', 'Scala']
+    skills: ['Typescript', 'React', 'Redux', 'Node', 'AWS', 'Scala', 'GraphQL']
   },
   {
     company: "DabApps", role: 'Full-stack Software Engineer', duration: '2018-2020',
@@ -18,13 +18,13 @@ export const portfolio = [
       `Xperta: Building a messaging app to connect legal professionals with expert witnesses`,
       `Peoplewise: Award-winning assessment and development programme built used by employers`
     ],
-    skills: ['Typescript', 'React', 'Redux', 'Node', 'Django']
+    skills: ['Typescript', 'React', 'Redux', 'Node', 'Django', 'PostgreSQL']
   },
   {
     company: "Imperial College London", role: 'Bsc Physics', duration: '2014-2018',
     description: [`Courses included Classical Mechanics, Environmental Physics,
     Fluid Dynamics, Quantum Mechanics, Electricity and Magnetism, Relativity,
-    Fourier Analysis and Light and Matter.`, `Coursework included computing and laboratory modules
+    Fourier Analysis and Light and Matter`, `Coursework included computing and laboratory modules
     where I used Python to model data and derive known relationships before writing a report summarising my findings`,
       `Finalist in the Althea-Imperial programme (now named WE Innovate),
     a 6-month long programme in association with Imperial Enterprise Lab in which I designed a prototype that removes air pollutants and pitched to judges for funding`,

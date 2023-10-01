@@ -8,7 +8,7 @@ readingTime: '5'
 When integrating code changes you have two options in the world of git: rebase or merge. In the debate of what method is more suitable, opinions vary from “I couldn’t possibly care less” to warnings against using rebase. In this blogpost I aim to provide an overview about how these two methods differ and highlight the strengths and weaknesses of each one. 
 
 &nbsp;  
-The typical scenario is: we have a branch, for example called “main”, and two branches based off it. One of these branches merges before the other and now we want to update the leftover branch to be in sync with the latest version of main. 
+The typical scenario is: we have a branch, for example called “main”, and two branches based off from it. One of these branches merges before the other and now we want to update the leftover branch to be in sync with the latest version of main. 
 
 &nbsp;  
 Git merge is most the commonly used command to achieve this, and if you click the ‘update branch’ button in GitHub this is the default. This algorithm merges two histories together, respecting the original timeline upon which the commits took place. In addition to the commits that make up our code changes, we also add a ‘merge commit’ to the commit history that represents this operation. This results in what can be described as a “diamond-shaped” or “train-tracks” history of code changes. As a result, this method is non-destructive because we are not losing any information when we complete this merge. If we need to roll back a commit.
