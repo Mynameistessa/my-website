@@ -16,7 +16,7 @@ export const portfolio = [
     description: [`Building web and mobile apps at a software development agency for business enterprises using Typescript, Javascript, Django and PostgreSQL`,
       `Centurion: A mobile app written in React Native that controls a laboratory centrifuge`,
       `Xperta: Building a messaging app to connect legal professionals with expert witnesses`,
-      `Peoplewise: Award-winning assessment and development programme built used by employers`
+      `Peoplewise: Award-winning assessment and development programme for employers`
     ],
     skills: ['Typescript', 'React', 'Redux', 'Node', 'Django', 'PostgreSQL']
   },
