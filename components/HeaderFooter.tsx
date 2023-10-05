@@ -35,7 +35,7 @@ export default function HeaderFooter({
             width='35'
             height='35'
             color={!isDarkTheme ? 'black' : 'white'}
-            className="ml-2"
+            className="ml-2 cursor-pointer"
             onClick={() => openInNewTab('https://linkedin.com/in/tessabreen')}
           />
           <GithubLogo
@@ -43,12 +43,14 @@ export default function HeaderFooter({
             size={32}
             color={!isDarkTheme ? 'black' : 'white'}
             fill={!isDarkTheme ? 'black' : 'white'}
+            className="cursor-pointer"
             onClick={() => openInNewTab('https://github.com/Mynameistessa')}
           />
           <TwitterLogo
             alt="twitter"
             size={32}
             color={!isDarkTheme ? 'black' : 'white'}
+            className="cursor-pointer"
             onClick={() => openInNewTab('https://twitter.com/tessabreendev')}
           />
           <ThemeButton />
