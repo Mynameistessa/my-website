@@ -5,9 +5,9 @@ const Posts = () => {
   const posts = getSortedPostsData();
   return (
     <section className='mt-2'>
-      <h2 className='font-bold text-2xl dark:text-warm-yellow text-pink-400'>Blog Posts</h2>
-      <p className='dark:text-white'>These posts are written from the research I did in preparation for lightning talks I presented while working at Unity Technologies.</p>
-      <ul className='w-full '>
+      <h2 className='font-bold text-2xl dark:text-warm-yellow text-pink-400'> 📕 Blog Posts</h2>
+      <p className='dark:text-white text-base'>These posts are written from the research I did in preparation for lightning talks I presented while working at Unity Technologies.</p>
+      <ul className='w-full text-center'>
         {posts.map(post => (
           <ListItem key={post.id} post={post} />
         ))}

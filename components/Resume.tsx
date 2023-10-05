@@ -40,11 +40,11 @@ export const CVSmallRow = ({ company, role, duration, description, skills }:
   { company: string, role: string, duration: string, description: string[], skills: string[] }) => {
   return (
     <>
-      <div className="grid grid-cols-[1fr_1fr] items-center border-b dark:border-platinum-grey border-wood dark:bg-slate-800 bg-warm-yellow p-2">
-        <div className="mr-2 whitespace-nowrap text-sm dark:text-white text-neutral-900">
+      <div className="grid grid-cols-[1fr_1fr] items-center border-b dark:border-platinum-grey border-wood dark:bg-slate-800 bg-warm-yellow">
+        <div className="ml-2 whitespace-nowrap text-sm dark:text-white text-neutral-900">
           {company}
         </div>
-        <div className="text-sm mr-2 dark:text-brick-red text-neutral-900 py-4 whitespace-nowrap font-bold">
+        <div className="text-sm ml-auto mr-2 dark:text-brick-red text-neutral-900 py-4 whitespace-nowrap font-bold">
           {role}
         </div>
       </div>
