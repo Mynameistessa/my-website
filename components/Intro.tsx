@@ -30,12 +30,12 @@ const Intro = () => {
         </a>
         {' '} where I&apos;m building the UI for an in-house continuous integration system for Unity developers.
         <p>In my spare time I take part in Hackathons. I also like to draw portraits, make music and get out amongst nature.</p>
-        <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="w-fit group transition-all duration-300 ease-in-out flex items-center">
+        {/* <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="w-fit group transition-all duration-300 ease-in-out flex items-center">
           <u className='bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
             Follow me on Goodreads!
           </u>
           <ArrowSquareOut size={20} color={'#FDA769'} className='ml-2' />
-        </a>
+        </a> */}
         <p>Check out my blogposts at the bottom of this page where I talk about recent topics I&apos;ve studied in software development and whatever I find interesting.</p>
       </div>
     </div>
