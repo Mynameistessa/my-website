@@ -32,15 +32,14 @@ export default function HeaderFooter({
         <div className='flex ml-auto lg:space-x-8 space-x-2 mr-2 lg:mr-8 items-center'>
           <LinkedinLogo
             alt="linkedin"
-            width='35'
-            height='35'
+            size={40}
             color={!isDarkTheme ? 'black' : 'white'}
             className="ml-2 cursor-pointer"
             onClick={() => openInNewTab('https://linkedin.com/in/tessabreen')}
           />
           <GithubLogo
             alt="github"
-            size={32}
+            size={40}
             color={!isDarkTheme ? 'black' : 'white'}
             fill={!isDarkTheme ? 'black' : 'white'}
             className="cursor-pointer"
@@ -48,7 +47,7 @@ export default function HeaderFooter({
           />
           <TwitterLogo
             alt="twitter"
-            size={32}
+            size={40}
             color={!isDarkTheme ? 'black' : 'white'}
             className="cursor-pointer"
             onClick={() => openInNewTab('https://twitter.com/tessabreendev')}

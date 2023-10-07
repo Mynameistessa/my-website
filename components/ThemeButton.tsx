@@ -16,7 +16,7 @@ const ThemeButton = () => {
   return (
     <Moon
       className="self-center cursor-pointer"
-      size={32}
+      size={40}
       color={!isDarkTheme ? '#000' : 'white'}
       onClick={() => {
         setTheme(isDarkTheme ? 'light' : 'dark')
