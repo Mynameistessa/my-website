@@ -1,7 +1,7 @@
 export const portfolio = [
   {
     company: "Unity Technologies", role: 'Front-End Software Engineer', duration: '2022-Present',
-    description: ['Helping build a world-class, scalable infrastructure for continuous integration used by Unity developers'],
+    description: [`Building a world-class, scalable continuous integration system used by developers of the Unity game engine using Typescript, React, Redux Saga, Go and Google Cloud Platform.`],
     skills: ['Typescript', 'React', 'Redux', 'Redux Toolkit', 'Github Actions', 'Node']
   },
   {
