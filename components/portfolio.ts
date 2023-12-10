@@ -8,7 +8,9 @@ export const portfolio = [
     company: "BBC", role: 'Full-Stack Software Engineer', duration: '2020-2022',
     description: [`Building micro-services and internal tools for journalists using Scala, React, Node, GraphQL, Redux, Typescript and AWS`,
       `Development of the content management system and rich-text editor
-    used by over 6000 journalists worldwide to curate world-class BBC content, most notably publishing to the BBC News and BBC Sport site`],
+    used by over 6000 journalists worldwide to curate world-class BBC content, most notably publishing to the BBC News and BBC Sport site`, 
+    `Participated as a member of the Accessibility Community of Practice team, attending weekly meetings to identify and address accessibility issues across BBC services`,
+    `Responsibilities included documenting and prioritizing problems, collaborating with the Accessibility team and designers to implement effective solutions`],
     skills: ['Typescript', 'React', 'Redux', 'Node', 'AWS', 'Scala', 'GraphQL']
   },
   {
