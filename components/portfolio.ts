@@ -1,7 +1,7 @@
 export const portfolio = [
   {
     company: "Unity Technologies", role: 'Front-End Software Engineer', duration: '2022-Present',
-    description: [`Building a world-class, scalable continuous integration system used by developers of the Unity game engine using Typescript, React, Redux Saga, Go and Google Cloud Platform.`],
+    description: [`Building a world-class, scalable continuous integration system used by developers of the Unity game engine using Typescript, React, Redux Saga, Go and Google Cloud Platform`],
     skills: ['Typescript', 'React', 'Redux', 'Redux Toolkit', 'Github Actions', 'Node']
   },
   {
@@ -10,7 +10,7 @@ export const portfolio = [
       `Development of the content management system and rich-text editor
     used by over 6000 journalists worldwide to curate world-class BBC content, most notably publishing to the BBC News and BBC Sport site`, 
     `Participated as a member of the Accessibility Community of Practice team, attending weekly meetings to identify and address accessibility issues across BBC services`,
-    `Responsibilities included documenting and prioritizing problems, collaborating with the Accessibility team and designers to implement effective solutions`],
+    `Responsibilities included documenting and prioritising problems, collaborating with the Accessibility team and designers to implement effective solutions`],
     skills: ['Typescript', 'React', 'Redux', 'Node', 'AWS', 'Scala', 'GraphQL']
   },
   {
