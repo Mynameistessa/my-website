@@ -22,12 +22,12 @@ useEffect(() => {
 ```
 
 &nbsp;  
-Generally speaking, the useEffect hook is used when subscribing to services and events, fetching data on component mount and reacting to updates in a component. However, it can also cause memory leaks, network waterfalls and race conditions if not used carefully. In this blog post I will go through why these issues occur and give examples of using this hook.
+Generally speaking, the useEffect hook is used when subscribing to services and events, fetching when the component mounts and reacting to updates. However, it can also cause memory leaks, network waterfalls and race conditions if not used carefully. In this blog post I will go through why these issues occur and give examples of using this hook.
 
 &nbsp;  
 ### **Memory leaks and Race Conditions**
 Memory leaks occur when you have objects or resources that are no longer needed but are still being referenced by the application. 
-One scenario where this can happen is when your component subscribes to an event listener. For example, perhaps we want to listen to subscribe to changes to the window size. If the user navigates away from the page, and the component unmounts without unsubscribing, then this event listener will remain and continue to up resources needlessly.
+One scenario where this can happen is when your component subscribes to an event listener. For example, perhaps we want to listen to subscribe to changes to the window size of the browser. If the user navigates away from the page, and the component unmounts without unsubscribing, then this event listener will remain and continue to up resources needlessly.
 
 &nbsp;  
 
@@ -60,7 +60,7 @@ return () => { isMounted = false }
 The first time this function runs isMounted is set to true and we update the component when the fetch completes. If the component unmounts we prevent the component updating with the latest data from the response. 
 
 &nbsp;  
-The second method would be to make use of an API that the browser is already using: Abort Controller. This will cancel any in-flight HTTP requests that are no longer needed and therefore save bandwidth. You can read more about this [here](https://maxrozen.com/race-conditions-fetching-data-react-with-useeffect). This solution doesn't support users of IE.
+The second method would be to make use of an API that the browser is already using: Abort Controller. This will cancel any in-flight HTTP requests that are no longer needed and therefore save bandwidth. However, this solution doesn't support users of IE.
 
 &nbsp;  
 ### **Network waterfalls**

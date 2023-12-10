@@ -75,6 +75,7 @@ Perhaps in the past your team decided to migrate a Javascript project to Typescr
 ### **Reading from an external API**
 If we are working with a logging system, or reading from an API where the types might get updated before we update our application then it is correct to use the unknown type when reading from it.
  
+&nbsp;  
 Another typical example is when you are reading from localStorage or any API where JSON is being deserialised. We can set the response to unknown and then handle the case for each type separately, ensuring type safety. 
 
 &nbsp;  
