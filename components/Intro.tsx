@@ -14,9 +14,6 @@ const Intro = () => {
           height="400"
           priority
         />
-        <figcaption className="text-sm text-neutral-600 dark:text-neutral-400">
-          <i>Cornwall &apos;22.</i>
-        </figcaption>
       </div>
       <div className='md:w-2/4 text-base dark:text-white text-almost-black lg:text-left md:leading-loose text-justify h-full'>
       <h2 className='md:text-2xl font-bold'>Hello!</h2>
