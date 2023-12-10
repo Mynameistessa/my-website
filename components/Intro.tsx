@@ -29,9 +29,10 @@ const Intro = () => {
             Unity Technologies
           </u>
         </a>
-        {' '} where I&apos;m focused on building the UI for scalable continuous integration system and improving user workflows across services.
+        {' '} where I&apos;m focused on building the UI for a scalable continuous integration system and improving user workflows across services.
         In my free time, I engage in Hackathons and pursue various creative interests, including drawing portraits, making music, and immersing myself in nature.
         Check out my blogposts at the bottom of this page where I talk about recent topics I&apos;ve studied in software development and whatever I find interesting.
+        For a comprehensive look at my professional journey and past experiences, feel free to download my CV to discover more about my skills and achievements.
       </p>
         {/* <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="w-fit group transition-all duration-300 ease-in-out flex items-center">
           <u className='bg-left-bottom bg-gradient-to-r dark:from-white dark:to-white from-warm-yellow to-warm-yellow bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
