@@ -13,36 +13,25 @@ const CV: React.FC = () => {
       width: window.innerWidth,
       height: window.innerHeight,
     });
-  }
+  };
   useEffect(() => {
     window.addEventListener("resize", handleResize, false);
 
     () => {
-      window.removeEventListener("resize", handleResize, false)
-    }
+      window.removeEventListener("resize", handleResize, false);
+    };
   }, []);
 
   return (
     <div>
-      {dimensions.width > 600 ? (
-        <CVLarge />)
-        : (
-          <CVSmall />
-        )}
-      <div className="text-center space-x-2 py-2 mb-16" >
+      {dimensions.width > 600 ? <CVLarge /> : <CVSmall />}
+      <div className="text-center space-x-2 py-2 mb-16">
         <a href="/CV.pdf" download>
-          <button
-            type="button"
-            data-te-ripple-init
-            data-te-ripple-color="light"
-            className="rounded bg-sky-600 px-2 py-4 text-xs font-bold leading-normal
-             text-white transition duration-150 ease-in-out active:bg-sky-600 hover:bg-slate-800">
-            Download Resume
-          </button>
+          <button className="btn  btn-primary">Download Resume</button>
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default CV;
