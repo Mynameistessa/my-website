@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 const Intro = () => {
   return (
@@ -33,14 +34,17 @@ const Intro = () => {
             </u>
           </a>{" "}
           where I&apos;m focused on building the UI for a scalable continuous
-          integration system and improving user workflows across services.
+          integration system and improving user workflows.
           {/* <br /> In my free time, I engage in Hackathons and pursue various
           creative interests, including drawing portraits, making music, and
           immersing myself in nature. */}
           <br /> Check out my blogposts at the bottom of this page where I talk
           about recent topics I&apos;ve studied in software development and
           whatever I find interesting. For a comprehensive look at my
-          professional journey and past experiences, feel free to download my CV
+          professional journey and past experiences, feel free to{" "}
+          <Link download href="/CV.pdf" className="link link-primary">
+            download my CV
+          </Link>{" "}
           to discover more about my skills and achievements.
         </p>
         {/* <a target="_blank" rel="noreferrer" href="https://www.goodreads.com/tessabreen" className="w-fit group transition-all duration-300 ease-in-out flex items-center">
