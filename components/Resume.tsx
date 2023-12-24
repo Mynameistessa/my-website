@@ -38,10 +38,7 @@ export const ExpandedCVRow = ({
         </ol>
         <div className="xs:invisible flex dark:text-white text-neutral-900 flex-wrap items-end space-x-2 space-y-2 mb-4">
           {skills.map((skill, index) => (
-            <span
-              key={index}
-              className="text-white inline-block whitespace-nowrap rounded-full bg-sky-800 px-[0.65em] pt-[0.35em] pb-[0.25em] text-center align-baseline text-[0.75em] font-bold leading-none"
-            >
+            <span key={index} className="badge badge-outline">
               {skill}
             </span>
           ))}
