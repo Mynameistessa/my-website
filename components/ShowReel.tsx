@@ -32,7 +32,7 @@ const ShowReel = () => {
           );
         })}
       </div>
-      <div className="flex justify-center w-full mb-16 mt-2">
+      <div className="hidden md:flex justify-center w-full mb-16 mt-2">
         <caption className={`italic text-xs w-1/2 break-words text-stone-500`}>
           {photoDescription}
         </caption>
