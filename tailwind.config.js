@@ -25,6 +25,7 @@ module.exports = {
         pesto: "#ABC270",
         wood: "#473C33",
         "warm-yellow": "#FEC868",
+        primary: "#FEC868",
         "peach-orange": "#FDA769",
         "purple-blue": "#041C32",
         "platinum-grey": "#E5E4E2",
@@ -46,6 +47,15 @@ module.exports = {
         "another-blue": "#0079FF",
         "platinum-grey": "#888B8D",
       },
+    },
+    daisyui: {
+      themes: [
+        {
+          light: {
+            primary: "#FEC868",
+          },
+        },
+      ],
     },
     screens: {
       sm: "640px",

@@ -27,7 +27,9 @@ const CV: React.FC = () => {
       {dimensions.width > 600 ? <CVLarge /> : <CVSmall />}
       <div className="text-center space-x-2 py-2 mb-16">
         <a href="/CV.pdf" download>
-          <button className="btn  btn-primary">Download Resume</button>
+          <button className="btn border-primary bg-primary hover:bg-amber-400 hover:border-amber-400 ">
+            Download Resume
+          </button>
         </a>
       </div>
     </div>
