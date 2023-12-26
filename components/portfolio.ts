@@ -72,7 +72,7 @@ export const experiences = [
     title: "Hackathon Survival Guide",
     pathToImage: "hackathonbook.png",
     aspectRatio: 0.663,
-    description: `Editor of The Hackathon Survival Guide". This book provides you with the thought process, 
+    description: `Editor of The Hackathon Survival Guide. This book provides you with the thought process, 
     ways of working, toolkit and creative edge to make your hack stand out from the crowd.`,
     date: "14.6.22",
   },
