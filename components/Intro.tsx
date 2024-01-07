@@ -34,14 +34,17 @@ const Intro = () => {
             </u>
           </a>{" "}
           where I&apos;m focused on building the UI for a scalable continuous
-          integration system and improving user workflows.
+          integration system and improving user workflows to support the
+          development of the Unity engine.
           {/* <br /> In my free time, I engage in Hackathons and pursue various
           creative interests, including drawing portraits, making music, and
           immersing myself in nature. */}
-          <br /> Check out my blogposts at the bottom of this page where I talk
-          about recent topics I&apos;ve studied in software development and
-          whatever I find interesting. For a comprehensive look at my
-          professional journey and past experiences, feel free to{" "}
+          <br />
+          <br />
+          Check out my blogposts at the bottom of this page where I talk about
+          recent topics I&apos;ve studied in software development and whatever I
+          find interesting. For a comprehensive look at my professional journey
+          and past experiences, feel free to{" "}
           <Link
             download
             href="/CV.pdf"
