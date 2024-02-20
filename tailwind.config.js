@@ -46,6 +46,8 @@ module.exports = {
         "light-pink": "#FCC8D1",
         "another-blue": "#0079FF",
         "platinum-grey": "#888B8D",
+        "brighton-blue": "#bee2d6",
+        "brighton-blue-dark": "#3f836c",
       },
     },
     daisyui: {
