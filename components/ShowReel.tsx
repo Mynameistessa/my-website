@@ -11,7 +11,7 @@ const ShowReel = () => {
 
   useEffect(() => {
     animate("div", { opacity: 1 }, { delay: stagger(0.3) });
-  }, []);
+  }, [animate]);
 
   return (
     <>
