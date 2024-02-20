@@ -48,7 +48,7 @@ export default async function Post({ params }: { params: { postId: string } }) {
       </p>
       <article className="text-justify text-sm md:text-base">
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        <div className="ml-auto m-4 inline-flex items-center text-white btn rounded bg-brighton-blue-dark px-6">
+        <div className="ml-auto m-4 inline-flex items-center text-black btn rounded bg-brighton-blue hover:bg-brighton-blue-dark border-none px-6">
           <Link href="/">Back to home</Link>
         </div>
       </article>
