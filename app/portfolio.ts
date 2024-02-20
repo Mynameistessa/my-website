@@ -80,7 +80,7 @@ export const experiences = [
     title: "SICK Intelligence Solution Hackathon",
     pathToImage: "sickhack.jpg",
     aspectRatio: 1.5,
-    description: `48-hour hackathon in Germany hosted by SICK Sensor Intelligence where myself and Sam built and deployed a live working semantic search solution for SICK products.`,
+    description: `48-hour hackathon in Germany hosted by SICK Sensor Intelligence where Sam and I built and deployed a live working semantic search solution for SICK products.`,
     date: "10.9.23",
   },
 ];

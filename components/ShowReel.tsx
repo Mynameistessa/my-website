@@ -1,11 +1,10 @@
 "use client";
 import Image from "next/image";
-import { experiences } from "./portfolio";
+import { experiences } from "../app/portfolio";
 import { useEffect, useState } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
 
 const ShowReel = () => {
-  // Set a fixed height for all images
   const fixedHeight = 200;
   const [photoDescription, setPhotoDescription] = useState<string | null>(null);
   const [scope, animate] = useAnimate();
@@ -18,7 +17,6 @@ const ShowReel = () => {
     <>
       <div className="flex gap-4 justify-center" ref={scope}>
         {experiences.map((experience, index) => {
-          // Calculate the width based on the fixed height and the aspect ratio
           const width = fixedHeight * experience.aspectRatio;
 
           return (
@@ -33,7 +31,7 @@ const ShowReel = () => {
                 alt={`${experience.title}`}
                 width={width}
                 height={fixedHeight}
-                className="object-contain inset-0 bg-cover bg-center z-0 hover:drop-shadow-lg" // This will ensure the image fits within the dimensions without stretching or cropping
+                className="object-contain inset-0 bg-cover bg-center z-0 hover:drop-shadow-lg"
               />
             </motion.div>
           );
