@@ -30,7 +30,7 @@ export default function HeaderFooter({
       <nav className="sticky top-0 backdrop-blur-md flex flex-row pb-4 pt-4 bg-transparent border-almost-black dark:border-white border-b-2 ">
         <Link
           href="/"
-          className={`ml-8 text-3xl text-almost-black dark:text-white font-bold self-center`}
+          className={`ml-2 md:ml-8 text-xl md:text-3xl text-almost-black dark:text-white font-bold self-center`}
         >
           Tessa Breen
         </Link>
