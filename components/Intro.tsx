@@ -16,7 +16,7 @@ const Intro = () => {
         />
       </div>
       <div className="md:w-2/4 text-base dark:text-white text-almost-black lg:text-left md:leading-loose self-center h-full">
-        <h2 className="md:text-2xl font-bold">Hello!</h2>
+        <h2 className="md:text-2xl text-xl font-bold">Hello!</h2>
         <p className="leading-snug">
           I&apos;m a Software Engineer and hackathon enthusiast.
           <br />

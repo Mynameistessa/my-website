@@ -5,7 +5,7 @@ const Posts = () => {
   const posts = getSortedPostsData();
   return (
     <section className="mt-2">
-      <h2 className="font-bold text-2xl dark:text-brighton-blue text-wood">
+      <h2 className="font-bold text-xl md:text-2xl dark:text-brighton-blue text-wood">
         Blog Posts
       </h2>
       <p className="dark:text-white text-base">
