@@ -12,11 +12,13 @@ const Posts = () => {
         These posts are written from the research I did in preparation for
         lightning talks.
       </p>
-      <ul className="w-full text-center">
-        {posts.map((post) => (
-          <ListItem key={post.id} post={post} />
-        ))}
-      </ul>
+      <div className="h-96 overflow-y-scroll">
+        <ul className="text-center ">
+          {posts.map((post) => (
+            <ListItem key={post.id} post={post} />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
