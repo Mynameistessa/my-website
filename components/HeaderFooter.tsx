@@ -24,6 +24,7 @@ export default function HeaderFooter({
   }
 
   const isDarkTheme = Boolean(theme === "dark");
+  const currentYear = new Date().getFullYear();
 
   return (
     <div className="flex min-h-screen flex-col bg-brighton-blue dark:bg-brighton-blue-dark">
@@ -63,8 +64,8 @@ export default function HeaderFooter({
       {children}
       <footer className="text-center lg:text-left mt-auto border-t dark:border-almost-black border-almost-black border-dotted bg-gradient-to-r bg-brighton-blue dark:bg-brighton-blue-dark">
         <div className="text-almost-black text-center p-4">
-          Copyright © 2023 Tessa Breen | Next.js {packageJson.dependencies.next}{" "}
-          & Tailwind Elements
+          Copyright © {currentYear} Tessa Breen | Next.js{" "}
+          {packageJson.dependencies.next} & Tailwind Elements
         </div>
       </footer>
     </div>
