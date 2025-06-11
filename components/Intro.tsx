@@ -16,9 +16,9 @@ const Intro = () => {
         />
       </div>
       <div className="md:w-2/4 text-base dark:text-white text-almost-black lg:text-left md:leading-loose self-center h-full">
-        <h2 className="md:text-2xl text-xl font-bold">Hello!</h2>
+        <h2 className="md:text-2xl text-xl font-bold">Hello</h2>
         <p className="leading-snug">
-          I&apos;m a Software Engineer and hackathon enthusiast.
+          I&apos;m a full stack software engineer and hackathon enthusiast.
           <br />
           Check out my blogposts where I talk about recent topics I&apos;ve
           studied in software development and whatever I find interesting. For a
