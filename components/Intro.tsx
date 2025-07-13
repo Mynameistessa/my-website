@@ -21,16 +21,10 @@ const Intro = () => {
           I&apos;m a full-stack software engineer based in London, with a
           background in physics from Imperial College London. I enjoy working
           collaboratively to solve problems and learning new technologies. Take
-          a look at my blog posts, where I share thoughts on recent topics I’ve
-          been exploring in software development, as well as anything else I
-          find interesting. For a detailed overview of my professional journey
-          and experience, feel free to download my CV to learn more about my
-          skills and achievements.
-          <br />
-          Check out my blogposts where I talk about recent topics I&apos;ve
-          studied in software development and whatever I find interesting. For a
-          comprehensive look at my professional journey and past experiences,
-          feel free to{" "}
+          a look at my blog posts, where I share thoughts on recent topics
+          I&apos;ve been exploring in software development, as well as anything
+          else I find interesting. For a detailed overview of my professional
+          journey and experience, feel free to{" "}
           <Link
             download
             href="/CV.pdf"
@@ -38,7 +32,7 @@ const Intro = () => {
           >
             download my CV
           </Link>{" "}
-          to discover more about my skills and achievements.
+          to learn more about my skills and achievements.
         </p>
       </div>
     </div>
