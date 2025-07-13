@@ -18,7 +18,14 @@ const Intro = () => {
       <div className="md:w-2/4 text-base dark:text-white text-almost-black lg:text-left md:leading-loose self-center h-full">
         <h2 className="md:text-2xl text-xl font-bold">Hello</h2>
         <p className="leading-snug">
-          I&apos;m a full stack software engineer and hackathon enthusiast.
+          I&apos;m a full-stack software engineer based in London, with a
+          background in physics from Imperial College London. I enjoy working
+          collaboratively to solve problems and learning new technologies. Take
+          a look at my blog posts, where I share thoughts on recent topics I’ve
+          been exploring in software development, as well as anything else I
+          find interesting. For a detailed overview of my professional journey
+          and experience, feel free to download my CV to learn more about my
+          skills and achievements.
           <br />
           Check out my blogposts where I talk about recent topics I&apos;ve
           studied in software development and whatever I find interesting. For a
